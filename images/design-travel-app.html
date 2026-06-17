@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel App — Designs — Kent John C. Domalaon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">KG.</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="index.html#about">About</a></li>
+    <li><a href="designs.html" class="active">Designs</a></li>
+    <li><a href="projects.html">Projects</a></li><li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <button class="theme-btn" onclick="toggleTheme()"><span class="theme-icon">🌙</span><span class="theme-label">Dark</span></button>
+</nav>
+<div class="container">
+  <div class="detail-hero fade-up">
+    <a href="designs.html" class="back-link">← Back to Designs</a>
+    <h1 class="detail-title">Travel App</h1>
+    <div class="detail-meta">
+      <span class="tag">Figma</span><span class="tag">Mobile App</span><span class="tag">Travel</span><span class="tag">UI/UX</span>
+    </div>
+    <p class="detail-desc">A travel discovery and trip planning mobile app UI. Designed to inspire wanderlust while providing practical tools for itinerary building, destination browsing, and booking management — all in a vibrant, photo-forward visual style.</p>
+  </div>
+  <div class="gallery fade-up">
+    <p class="section-label" style="margin-bottom:16px">Gallery</p>
+    <div class="gallery-main"><img id="main-img" src="images/preview (23).webp" alt="Travel App" /></div>
+    <div class="gallery-thumbs">
+      <div class="gallery-thumb active" onclick="setImg('images/preview (23).webp',this)"><img src="images/preview (23).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (24).webp',this)"><img src="images/preview (24).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (25).webp',this)"><img src="images/preview (25).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (26).webp',this)"><img src="images/preview (26).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (27).webp',this)"><img src="images/preview (27).webp" /></div>
+    </div>
+  </div>
+  <div class="detail-sections fade-up">
+    <div class="detail-main">
+      <div class="detail-block">
+        <p class="detail-block-title">Overview</p>
+        <p>The Travel App is a mobile UI concept designed to bridge travel inspiration and practical trip planning. Full-bleed destination photography drives visual engagement, while underlying structures keep the booking and planning experience intuitive and stress-free.</p>
+        <p>The design language draws from modern travel platforms — airy, full-screen imagery paired with semi-transparent card overlays to maintain readability without losing the scenic backdrop.</p>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Key Features</p>
+        <ul class="feature-list">
+          <li>Destination discovery feed with curated collections and trending spots</li>
+          <li>Full-screen destination detail view with photos, highlights, and reviews</li>
+          <li>Trip itinerary builder with drag-and-drop day planning</li>
+          <li>Integrated flight and hotel search with filter options</li>
+          <li>Saved trips and wishlists with shareable links</li>
+          <li>Currency converter and weather widget on destination pages</li>
+        </ul>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Design Process</p>
+        <div class="process-steps">
+          <div class="process-step"><span class="step-num">01</span><div class="step-body"><p class="step-title">Competitive Analysis</p><p class="step-desc">Analyzed apps like Airbnb, Booking.com, and Wanderlog. Identified opportunities in itinerary building and discovery feed UX.</p></div></div>
+          <div class="process-step"><span class="step-num">02</span><div class="step-body"><p class="step-title">Visual Direction</p><p class="step-desc">Chose a light, airy color palette with teal and coral accents. Prioritized photography as the primary design element across all screens.</p></div></div>
+          <div class="process-step"><span class="step-num">03</span><div class="step-body"><p class="step-title">Screen Architecture</p><p class="step-desc">Designed a tab-based navigation system: Explore, Plan, Bookings, Profile. Mapped all user paths within each tab.</p></div></div>
+          <div class="process-step"><span class="step-num">04</span><div class="step-body"><p class="step-title">High-Fidelity Screens</p><p class="step-desc">Built 20+ screens covering key flows. Applied consistent spacing, elevation, and motion principles across all components.</p></div></div>
+          <div class="process-step"><span class="step-num">05</span><div class="step-body"><p class="step-title">Micro-interactions</p><p class="step-desc">Defined transition animations and micro-interaction specs for the prototype — parallax scrolling on hero images, spring animations on cards.</p></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="detail-sidebar">
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Project Info</p>
+        <div class="sidebar-item"><span class="sidebar-item-label">Type</span><span class="sidebar-item-value">Mobile App</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Role</span><span class="sidebar-item-value">UI/UX Designer</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Tool</span><span class="sidebar-item-value">Figma</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Context</span><span class="sidebar-item-value">Conceptual Project</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Year</span><span class="sidebar-item-value">2025</span></div>
+      </div>
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Design Tags</p>
+        <div class="tags" style="gap:6px">
+          <span class="tag">Figma</span><span class="tag">Mobile</span><span class="tag">Travel</span><span class="tag">Discovery</span><span class="tag">Lifestyle</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>© 2026 Kent John C. Domalaon. All rights reserved.</footer>
+<script>
+  const saved = localStorage.getItem('theme') || 'light'; document.documentElement.setAttribute('data-theme', saved); updateThemeBtn(saved);
+  function toggleTheme() { const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light'; document.documentElement.setAttribute('data-theme', next); localStorage.setItem('theme', next); updateThemeBtn(next); }
+  function updateThemeBtn(theme) { document.querySelector('.theme-icon').textContent = theme === 'dark' ? '☀️' : '🌙'; document.querySelector('.theme-label').textContent = theme === 'dark' ? 'Light' : 'Dark'; }
+  function setImg(src, thumb) { document.getElementById('main-img').src = src; document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active')); thumb.classList.add('active'); }
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

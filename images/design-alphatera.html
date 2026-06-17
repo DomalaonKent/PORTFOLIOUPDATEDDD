@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alphatera Construction Supply — Designs — Kent John C. Domalaon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">KG.</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="designs.html" class="active">Designs</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <button class="theme-btn" onclick="toggleTheme()">
+    <span class="theme-icon">🌙</span>
+    <span class="theme-label">Dark</span>
+  </button>
+</nav>
+<div class="container">
+
+  <div class="detail-hero fade-up">
+    <a href="designs.html" class="back-link">← Back to Designs</a>
+    <h1 class="detail-title">Alphatera Construction Supply</h1>
+    <div class="detail-meta">
+      <span class="tag">Figma</span>
+      <span class="tag">B2B Platform</span>
+      <span class="tag">Web App</span>
+      <span class="tag">UI/UX</span>
+    </div>
+    <p class="detail-desc">A B2B partner portal UI design for Alphatera Construction Supply. Designed with a navy and rust color system to reflect industrial authority, enabling partners to manage orders, view product catalogs, and track deliveries.</p>
+  </div>
+
+  <div class="gallery fade-up">
+    <p class="section-label" style="margin-bottom:16px">Gallery</p>
+    <div class="gallery-main">
+      <img id="main-img" src="images/preview (4).webp" alt="Alphatera Construction Supply" />
+    </div>
+    <div class="gallery-thumbs">
+      <div class="gallery-thumb active" onclick="setImg('images/preview (4).webp',this)"><img src="images/preview (4).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (5).webp',this)"><img src="images/preview (5).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (6).webp',this)"><img src="images/preview (6).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (7).webp',this)"><img src="images/preview (7).webp" /></div>
+    </div>
+  </div>
+
+  <div class="detail-sections fade-up">
+    <div class="detail-main">
+      <div class="detail-block">
+        <p class="detail-block-title">Overview</p>
+        <p>The Alphatera Construction Supply portal is a B2B web platform designed for construction material partners and clients. The design system is anchored by a navy (#1B2A4A) and rust (#C0420A) palette that communicates professionalism and industrial strength.</p>
+        <p>The goal was to create a partner-facing interface that simplifies order management and product discovery while maintaining a corporate visual identity aligned with Alphatera's brand.</p>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Key Features</p>
+        <ul class="feature-list">
+          <li>Partner login and authenticated dashboard with company-level data</li>
+          <li>Product catalog with category filtering and search</li>
+          <li>Order management interface with status tracking</li>
+          <li>About page with leadership profiles and image carousels</li>
+          <li>CoreUI-inspired collapsible sidebar navigation</li>
+          <li>Responsive layouts adapted for desktop and tablet</li>
+        </ul>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Design Process</p>
+        <div class="process-steps">
+          <div class="process-step">
+            <span class="step-num">01</span>
+            <div class="step-body"><p class="step-title">Brand Discovery</p><p class="step-desc">Studied Alphatera's branding materials and business context. Defined the navy/rust color system to reflect industrial authority and trust.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">02</span>
+            <div class="step-body"><p class="step-title">Information Architecture</p><p class="step-desc">Mapped out the partner portal's user flows — login, dashboard, catalog browsing, order placement, and account settings.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">03</span>
+            <div class="step-body"><p class="step-title">Component Library</p><p class="step-desc">Built reusable Figma components: sidebar items, product cards, order status badges, form inputs, and data tables.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">04</span>
+            <div class="step-body"><p class="step-title">High-Fidelity Design</p><p class="step-desc">Assembled full screens using the component library. Applied typography scale and spacing tokens for visual consistency.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">05</span>
+            <div class="step-body"><p class="step-title">Prototype & Review</p><p class="step-desc">Created an interactive prototype linking key flows. Reviewed with stakeholders and refined based on feedback.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="detail-sidebar">
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Project Info</p>
+        <div class="sidebar-item"><span class="sidebar-item-label">Type</span><span class="sidebar-item-value">B2B Web Platform</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Role</span><span class="sidebar-item-value">UI/UX Designer</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Tool</span><span class="sidebar-item-value">Figma</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Industry</span><span class="sidebar-item-value">Construction</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Year</span><span class="sidebar-item-value">2025</span></div>
+      </div>
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Design Tags</p>
+        <div class="tags" style="gap:6px">
+          <span class="tag">Figma</span><span class="tag">B2B</span><span class="tag">Portal</span><span class="tag">Web App</span><span class="tag">Branding</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<footer>© 2026 Kent John C. Domalaon. All rights reserved.</footer>
+<script>
+  const saved = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved);
+  updateThemeBtn(saved);
+  function toggleTheme() {
+    const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateThemeBtn(next);
+  }
+  function updateThemeBtn(theme) {
+    document.querySelector('.theme-icon').textContent = theme === 'dark' ? '☀️' : '🌙';
+    document.querySelector('.theme-label').textContent = theme === 'dark' ? 'Light' : 'Dark';
+  }
+  function setImg(src, thumb) {
+    document.getElementById('main-img').src = src;
+    document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

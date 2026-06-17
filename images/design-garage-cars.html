@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garage Cars — Designs — Kent John C. Domalaon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">KG.</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="index.html#about">About</a></li>
+    <li><a href="designs.html" class="active">Designs</a></li>
+    <li><a href="projects.html">Projects</a></li><li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <button class="theme-btn" onclick="toggleTheme()"><span class="theme-icon">🌙</span><span class="theme-label">Dark</span></button>
+</nav>
+<div class="container">
+  <div class="detail-hero fade-up">
+    <a href="designs.html" class="back-link">← Back to Designs</a>
+    <h1 class="detail-title">Garage Cars</h1>
+    <div class="detail-meta">
+      <span class="tag">Figma</span><span class="tag">Automotive</span><span class="tag">Web App</span><span class="tag">UI/UX</span>
+    </div>
+    <p class="detail-desc">An automotive marketplace and car management web platform UI. Designed with a bold, dark aesthetic that puts vehicle photography front and center — built for car enthusiasts to browse, list, and manage their vehicle collections.</p>
+  </div>
+  <div class="gallery fade-up">
+    <p class="section-label" style="margin-bottom:16px">Gallery</p>
+    <div class="gallery-main"><img id="main-img" src="images/designs/preview-(28).webp" alt="Garage Cars" /></div>
+    <div class="gallery-thumbs">
+      <div class="gallery-thumb active" onclick="setImg('images/designs/preview-(28).webp',this)"><img src="images/designs/preview-(28).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/designs/preview-(29).webp',this)"><img src="images/designs/preview-(29).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/designs/preview-(30).webp',this)"><img src="images/designs/preview-(30).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/designs/preview-(31).webp',this)"><img src="images/designs/preview-(31).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/designs/preview-(32).webp',this)"><img src="images/designs/preview-(32).webp" /></div>
+    </div>
+  </div>
+  <div class="detail-sections fade-up">
+    <div class="detail-main">
+      <div class="detail-block">
+        <p class="detail-block-title">Overview</p>
+        <p>Garage Cars is an automotive web platform UI designed for car enthusiasts, collectors, and buyers. The interface takes cues from premium automotive brands — moody dark backgrounds, cinematic car photography, and sleek typography that evokes performance and precision.</p>
+        <p>The platform serves two audiences: buyers browsing available vehicles and sellers managing their listings — with distinct but cohesive UI paths for each role.</p>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Key Features</p>
+        <ul class="feature-list">
+          <li>Hero showcase with fullscreen vehicle photography and CTA overlay</li>
+          <li>Car listing grid with advanced filter panel (make, model, year, price, type)</li>
+          <li>Vehicle detail page with 360° image gallery, spec table, and history report</li>
+          <li>Seller dashboard for managing listings, inquiries, and analytics</li>
+          <li>Comparison tool for side-by-side vehicle spec evaluation</li>
+          <li>Favorites and saved searches with notification toggles</li>
+        </ul>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Design Process</p>
+        <div class="process-steps">
+          <div class="process-step"><span class="step-num">01</span><div class="step-body"><p class="step-title">Aesthetic Direction</p><p class="step-desc">Studied automotive brand websites (Porsche, BMW, Carvana). Chose a cinematic dark theme with electric blue accents to convey premium positioning.</p></div></div>
+          <div class="process-step"><span class="step-num">02</span><div class="step-body"><p class="step-title">Content Strategy</p><p class="step-desc">Defined what information buyers need at each stage: browsing, comparing, deciding. Structured the listing detail page around this journey.</p></div></div>
+          <div class="process-step"><span class="step-num">03</span><div class="step-body"><p class="step-title">Typography & Grid</p><p class="step-desc">Applied a display typeface for headings paired with clean sans-serif body text. Used a 12-column grid with generous column gutters for a premium spacious feel.</p></div></div>
+          <div class="process-step"><span class="step-num">04</span><div class="step-body"><p class="step-title">Screen Design</p><p class="step-desc">Designed home, listings, vehicle detail, seller dashboard, and comparison screens. Each screen optimized for its primary user task.</p></div></div>
+          <div class="process-step"><span class="step-num">05</span><div class="step-body"><p class="step-title">Prototype</p><p class="step-desc">Built an interactive Figma prototype covering the buyer flow from homepage to vehicle inquiry form submission.</p></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="detail-sidebar">
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Project Info</p>
+        <div class="sidebar-item"><span class="sidebar-item-label">Type</span><span class="sidebar-item-value">Automotive Marketplace</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Role</span><span class="sidebar-item-value">UI/UX Designer</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Tool</span><span class="sidebar-item-value">Figma</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Context</span><span class="sidebar-item-value">Conceptual Project</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Year</span><span class="sidebar-item-value">2025</span></div>
+      </div>
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Design Tags</p>
+        <div class="tags" style="gap:6px">
+          <span class="tag">Figma</span><span class="tag">Automotive</span><span class="tag">Dark UI</span><span class="tag">Marketplace</span><span class="tag">Web App</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>© 2026 Kent John C. Domalaon. All rights reserved.</footer>
+<script>
+  const saved = localStorage.getItem('theme') || 'light'; document.documentElement.setAttribute('data-theme', saved); updateThemeBtn(saved);
+  function toggleTheme() { const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light'; document.documentElement.setAttribute('data-theme', next); localStorage.setItem('theme', next); updateThemeBtn(next); }
+  function updateThemeBtn(theme) { document.querySelector('.theme-icon').textContent = theme === 'dark' ? '☀️' : '🌙'; document.querySelector('.theme-label').textContent = theme === 'dark' ? 'Light' : 'Dark'; }
+  function setImg(src, thumb) { document.getElementById('main-img').src = src; document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active')); thumb.classList.add('active'); }
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

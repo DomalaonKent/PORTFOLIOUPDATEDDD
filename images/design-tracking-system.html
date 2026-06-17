@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tracking System — Designs — Kent John C. Domalaon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">KG.</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="designs.html" class="active">Designs</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <button class="theme-btn" onclick="toggleTheme()">
+    <span class="theme-icon">🌙</span>
+    <span class="theme-label">Dark</span>
+  </button>
+</nav>
+<div class="container">
+
+  <div class="detail-hero fade-up">
+    <a href="designs.html" class="back-link">← Back to Designs</a>
+    <h1 class="detail-title">Tracking System</h1>
+    <div class="detail-meta">
+      <span class="tag">Figma</span>
+      <span class="tag">Operations</span>
+      <span class="tag">Web App</span>
+      <span class="tag">UI/UX</span>
+    </div>
+    <p class="detail-desc">An operations tracking system UI designed for monitoring tasks, shipments, or workflow progress in real time. Features a structured information layout with status-driven visual cues and a practical, productivity-first design approach.</p>
+  </div>
+
+  <div class="gallery fade-up">
+    <p class="section-label" style="margin-bottom:16px">Gallery</p>
+    <div class="gallery-main">
+      <img id="main-img" src="images/preview (13).webp" alt="Tracking System" />
+    </div>
+    <div class="gallery-thumbs">
+      <div class="gallery-thumb active" onclick="setImg('images/preview (13).webp',this)"><img src="images/preview (13).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (14).webp',this)"><img src="images/preview (14).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (15).webp',this)"><img src="images/preview (15).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (16).webp',this)"><img src="images/preview (16).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (17).webp',this)"><img src="images/preview (17).webp" /></div>
+    </div>
+  </div>
+
+  <div class="detail-sections fade-up">
+    <div class="detail-main">
+      <div class="detail-block">
+        <p class="detail-block-title">Overview</p>
+        <p>The Tracking System is an operational web application UI designed to give teams a centralized view of ongoing processes — whether tracking shipments, project milestones, or service requests. The interface is structured around status-first thinking, where every item's current state is immediately visible without digging into detail views.</p>
+        <p>Designed with operations teams in mind, the UI minimizes cognitive load through consistent status badges, clear timestamps, and actionable buttons surfaced at the right moment.</p>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Key Features</p>
+        <ul class="feature-list">
+          <li>Timeline-based tracking view with milestone progress indicators</li>
+          <li>Status-coded item cards (Pending, In Transit, Delivered, Flagged)</li>
+          <li>Search and multi-filter panel for fast item lookup</li>
+          <li>Detail drawer with full item history and notes</li>
+          <li>Notification and alert system for status changes</li>
+          <li>Export and reporting interface for operational summaries</li>
+        </ul>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Design Process</p>
+        <div class="process-steps">
+          <div class="process-step">
+            <span class="step-num">01</span>
+            <div class="step-body"><p class="step-title">Use Case Definition</p><p class="step-desc">Defined the primary user scenarios: checking item status, filtering by urgency, and updating tracking records. Built flows around these core tasks.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">02</span>
+            <div class="step-body"><p class="step-title">Status System Design</p><p class="step-desc">Developed a color-coded status taxonomy — each state paired with a distinct color, icon, and label to eliminate ambiguity at a glance.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">03</span>
+            <div class="step-body"><p class="step-title">Layout & Hierarchy</p><p class="step-desc">Established a split-view layout: list on the left, detail panel on the right. Ensured primary actions were always within thumb reach.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">04</span>
+            <div class="step-body"><p class="step-title">Component Build</p><p class="step-desc">Built all UI components in Figma with interactive variants for hover, selected, and expanded states.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">05</span>
+            <div class="step-body"><p class="step-title">Usability Review</p><p class="step-desc">Ran the prototype through informal usability checks, identifying friction points in the filter flow and refining the UI accordingly.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="detail-sidebar">
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Project Info</p>
+        <div class="sidebar-item"><span class="sidebar-item-label">Type</span><span class="sidebar-item-value">Operations Tool</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Role</span><span class="sidebar-item-value">UI/UX Designer</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Tool</span><span class="sidebar-item-value">Figma</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Context</span><span class="sidebar-item-value">Conceptual Project</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Year</span><span class="sidebar-item-value">2025</span></div>
+      </div>
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Design Tags</p>
+        <div class="tags" style="gap:6px">
+          <span class="tag">Figma</span><span class="tag">Operations</span><span class="tag">Tracking</span><span class="tag">Status UI</span><span class="tag">Web App</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<footer>© 2026 Kent John C. Domalaon. All rights reserved.</footer>
+<script>
+  const saved = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved);
+  updateThemeBtn(saved);
+  function toggleTheme() {
+    const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateThemeBtn(next);
+  }
+  function updateThemeBtn(theme) {
+    document.querySelector('.theme-icon').textContent = theme === 'dark' ? '☀️' : '🌙';
+    document.querySelector('.theme-label').textContent = theme === 'dark' ? 'Light' : 'Dark';
+  }
+  function setImg(src, thumb) {
+    document.getElementById('main-img').src = src;
+    document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

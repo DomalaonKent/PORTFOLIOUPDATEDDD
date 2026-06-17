@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Designs — Kent John C. Domalaon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .designs-page-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding: 48px 0;
+    }
+    .design-page-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+    .design-page-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      border-color: var(--text-muted);
+    }
+    .design-page-card-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+    .design-page-card-info {
+      padding: 14px 16px 18px;
+    }
+    .design-page-card-title {
+      font-size: 0.925rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .design-page-card-sub {
+      font-size: 0.775rem;
+      color: var(--text-muted);
+    }
+    @media (max-width: 768px) {
+      .designs-page-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .designs-page-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">KG.</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="designs.html" class="active">Designs</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <button class="theme-btn" onclick="toggleTheme()">
+    <span class="theme-icon">🌙</span>
+    <span class="theme-label">Dark</span>
+  </button>
+</nav>
+
+<div class="container">
+
+  <div class="page-hero fade-up">
+    <p class="section-label">Design Work</p>
+    <h1 class="page-title">UI/UX Designs</h1>
+    <p class="page-desc">A collection of UI/UX design projects crafted in Figma — spanning enterprise systems, mobile apps, dashboards, and conceptual work.</p>
+  </div>
+
+  <div class="designs-page-grid fade-up">
+
+    <a href="design-r5-intranet.html" class="design-page-card">
+      <img class="design-page-card-img" src="images/preview.webp" alt="R5 V2 Intranet" />
+      <div class="design-page-card-info">
+        <p class="design-page-card-title">R5 V2 Intranet</p>
+        <p class="design-page-card-sub">Enterprise · Figma</p>
+      </div>
+    </a>
+
+    <a href="design-alphatera.html" class="design-page-card">
+      <img class="design-page-card-img" src="images/preview (4).webp" alt="Alphatera Construction Supply" />
+      <div class="design-page-card-info">
+        <p class="design-page-card-title">Alphatera Construction Supply</p>
+        <p class="design-page-card-sub">B2B Platform · Figma</p>
+      </div>
+    </a>
+
+    <a href="design-explore-dashboard.html" class="design-page-card">
+      <img class="design-page-card-img" src="images/preview (8).webp" alt="Explore Dashboard" />
+      <div class="design-page-card-info">
+        <p class="design-page-card-title">Explore Dashboard</p>
+        <p class="design-page-card-sub">Analytics · Figma</p>
+      </div>
+    </a>
+
+    <a href="design-tracking-system.html" class="design-page-card">
+      <img class="design-page-card-img" src="images/preview (13).webp" alt="Tracking System" />
+      <div class="design-page-card-info">
+        <p class="design-page-card-title">Tracking System</p>
+        <p class="design-page-card-sub">Operations · Figma</p>
+      </div>
+    </a>
+
+    <a href="design-barbershop-app.html" class="design-page-card">
+      <img class="design-page-card-img" src="images/preview (18).webp" alt="Barbershop App" />
+      <div class="design-page-card-info">
+        <p class="design-page-card-title">Barbershop App</p>
+        <p class="design-page-card-sub">Mobile App · Figma</p>
+      </div>
+    </a>
+
+    <a href="design-travel-app.html" class="design-page-card">
+      <img class="design-page-card-img" src="images/preview (23).webp" alt="Travel App" />
+      <div class="design-page-card-info">
+        <p class="design-page-card-title">Travel App</p>
+        <p class="design-page-card-sub">Mobile App · Figma</p>
+      </div>
+    </a>
+
+    <a href="design-damayan.html" class="design-page-card">
+      <img class="design-page-card-img" src="images/preview (28).webp" alt="Damayan" />
+      <div class="design-page-card-info">
+        <p class="design-page-card-title">Damayan</p>
+        <p class="design-page-card-sub">Community App · Figma</p>
+      </div>
+    </a>
+
+    <a href="design-spongebob-ui.html" class="design-page-card">
+      <img class="design-page-card-img" src="images/preview (33).webp" alt="SpongeBob UI Concept" />
+      <div class="design-page-card-info">
+        <p class="design-page-card-title">SpongeBob UI Concept</p>
+        <p class="design-page-card-sub">Conceptual · Figma</p>
+      </div>
+    </a>
+
+    <a href="design-bottle.html" class="design-page-card">
+      <img class="design-page-card-img" src="images/preview (35).webp" alt="Bottle" />
+      <div class="design-page-card-info">
+        <p class="design-page-card-title">Bottle</p>
+        <p class="design-page-card-sub">E-commerce · Figma</p>
+      </div>
+    </a>
+
+  </div>
+
+</div>
+
+<footer>© 2026 Kent John C. Domalaon. All rights reserved.</footer>
+
+<script>
+  const saved = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved);
+  updateThemeBtn(saved);
+  function toggleTheme() {
+    const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateThemeBtn(next);
+  }
+  function updateThemeBtn(theme) {
+    document.querySelector('.theme-icon').textContent = theme === 'dark' ? '☀️' : '🌙';
+    document.querySelector('.theme-label').textContent = theme === 'dark' ? 'Light' : 'Dark';
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Dashboard — Designs — Kent John C. Domalaon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">KG.</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="designs.html" class="active">Designs</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <button class="theme-btn" onclick="toggleTheme()">
+    <span class="theme-icon">🌙</span>
+    <span class="theme-label">Dark</span>
+  </button>
+</nav>
+<div class="container">
+
+  <div class="detail-hero fade-up">
+    <a href="designs.html" class="back-link">← Back to Designs</a>
+    <h1 class="detail-title">Explore Dashboard</h1>
+    <div class="detail-meta">
+      <span class="tag">Figma</span>
+      <span class="tag">Analytics</span>
+      <span class="tag">Dashboard</span>
+      <span class="tag">UI/UX</span>
+    </div>
+    <p class="detail-desc">An analytics and exploration dashboard UI designed to present complex data in a visually digestible format. Focused on clean layout, intuitive data widgets, and a light-themed aesthetic built for productivity.</p>
+  </div>
+
+  <div class="gallery fade-up">
+    <p class="section-label" style="margin-bottom:16px">Gallery</p>
+    <div class="gallery-main">
+      <img id="main-img" src="images/designs/preview-(8).webp" alt="Explore Dashboard" />
+    </div>
+    <div class="gallery-thumbs">
+      <div class="gallery-thumb active" onclick="setImg('images/designs/preview-(8).webp',this)"><img src="images/designs/preview-(8).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/designs/preview-(9).webp',this)"><img src="images/designs/preview-(9).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/designs/preview-(10).webp',this)"><img src="images/designs/preview-(10).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/designs/preview-(11).webp',this)"><img src="images/designs/preview-(11).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/designs/preview-(12).webp',this)"><img src="images/designs/preview-(12).webp" /></div>
+    </div>
+  </div>
+
+  <div class="detail-sections fade-up">
+    <div class="detail-main">
+      <div class="detail-block">
+        <p class="detail-block-title">Overview</p>
+        <p>The Explore Dashboard is a data visualization and analytics UI concept designed to help users explore metrics and insights at a glance. The design prioritizes information density without sacrificing readability — using card-based layouts, color-coded indicators, and clear typographic hierarchy.</p>
+        <p>The design was developed as a conceptual exercise in dashboard UX, exploring how to present multi-dimensional data sets in a way that feels approachable rather than overwhelming.</p>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Key Features</p>
+        <ul class="feature-list">
+          <li>KPI summary cards with trend indicators and sparklines</li>
+          <li>Interactive chart area with line, bar, and donut chart types</li>
+          <li>Filterable data table with sortable columns</li>
+          <li>Date range picker and time comparison toggle</li>
+          <li>User activity feed and recent events log</li>
+          <li>Responsive 12-column grid layout for flexible widget placement</li>
+        </ul>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Design Process</p>
+        <div class="process-steps">
+          <div class="process-step">
+            <span class="step-num">01</span>
+            <div class="step-body"><p class="step-title">Concept & Reference</p><p class="step-desc">Collected references from top SaaS dashboards (Linear, Vercel, Retool). Identified patterns in effective data presentation and layout.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">02</span>
+            <div class="step-body"><p class="step-title">Grid System Setup</p><p class="step-desc">Established a 12-column grid with consistent spacing tokens to ensure widget alignment and scalability across screen sizes.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">03</span>
+            <div class="step-body"><p class="step-title">Widget Design</p><p class="step-desc">Designed individual dashboard widgets as standalone Figma components, each with defined props for state, size, and data type.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">04</span>
+            <div class="step-body"><p class="step-title">Layout Composition</p><p class="step-desc">Arranged widgets across the main dashboard, sidebar, and detail views. Balanced information density with breathing room.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">05</span>
+            <div class="step-body"><p class="step-title">Dark Mode Variant</p><p class="step-desc">Extended the design with a dark mode variant, adjusting contrast ratios and chart colors for accessibility compliance.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="detail-sidebar">
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Project Info</p>
+        <div class="sidebar-item"><span class="sidebar-item-label">Type</span><span class="sidebar-item-value">Analytics Dashboard</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Role</span><span class="sidebar-item-value">UI/UX Designer</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Tool</span><span class="sidebar-item-value">Figma</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Context</span><span class="sidebar-item-value">Conceptual Project</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Year</span><span class="sidebar-item-value">2025</span></div>
+      </div>
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Design Tags</p>
+        <div class="tags" style="gap:6px">
+          <span class="tag">Figma</span><span class="tag">Dashboard</span><span class="tag">Analytics</span><span class="tag">SaaS</span><span class="tag">Data Viz</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<footer>© 2026 Kent John C. Domalaon. All rights reserved.</footer>
+<script>
+  const saved = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved);
+  updateThemeBtn(saved);
+  function toggleTheme() {
+    const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateThemeBtn(next);
+  }
+  function updateThemeBtn(theme) {
+    document.querySelector('.theme-icon').textContent = theme === 'dark' ? '☀️' : '🌙';
+    document.querySelector('.theme-label').textContent = theme === 'dark' ? 'Light' : 'Dark';
+  }
+  function setImg(src, thumb) {
+    document.getElementById('main-img').src = src;
+    document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

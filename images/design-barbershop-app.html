@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barbershop App — Designs — Kent John C. Domalaon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">KG.</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="designs.html" class="active">Designs</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <button class="theme-btn" onclick="toggleTheme()">
+    <span class="theme-icon">🌙</span>
+    <span class="theme-label">Dark</span>
+  </button>
+</nav>
+<div class="container">
+  <div class="detail-hero fade-up">
+    <a href="designs.html" class="back-link">← Back to Designs</a>
+    <h1 class="detail-title">Barbershop App</h1>
+    <div class="detail-meta">
+      <span class="tag">Figma</span><span class="tag">Mobile App</span><span class="tag">iOS/Android</span><span class="tag">UI/UX</span>
+    </div>
+    <p class="detail-desc">A mobile app UI for a barbershop booking and service management experience. Designed with a dark, masculine aesthetic — combining bold typography, high-contrast imagery, and a streamlined appointment booking flow.</p>
+  </div>
+  <div class="gallery fade-up">
+    <p class="section-label" style="margin-bottom:16px">Gallery</p>
+    <div class="gallery-main"><img id="main-img" src="images/preview (18).webp" alt="Barbershop App" /></div>
+    <div class="gallery-thumbs">
+      <div class="gallery-thumb active" onclick="setImg('images/preview (18).webp',this)"><img src="images/preview (18).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (19).webp',this)"><img src="images/preview (19).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (20).webp',this)"><img src="images/preview (20).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (21).webp',this)"><img src="images/preview (21).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (22).webp',this)"><img src="images/preview (22).webp" /></div>
+    </div>
+  </div>
+  <div class="detail-sections fade-up">
+    <div class="detail-main">
+      <div class="detail-block">
+        <p class="detail-block-title">Overview</p>
+        <p>The Barbershop App is a mobile UI concept for a grooming and appointment booking application. The design embraces a premium dark aesthetic with warm amber accents, communicating the brand's positioning as a modern barbershop for style-conscious clients.</p>
+        <p>The app is designed for a seamless one-handed mobile experience — from discovering services, selecting a barber, picking a time slot, and confirming a booking in as few taps as possible.</p>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Key Features</p>
+        <ul class="feature-list">
+          <li>Onboarding flow with service category selection</li>
+          <li>Barber profile cards with ratings and available slots</li>
+          <li>Calendar-based appointment picker with time slot grid</li>
+          <li>Service menu with pricing and duration details</li>
+          <li>Booking confirmation screen with QR code and summary</li>
+          <li>User profile with booking history and loyalty points</li>
+        </ul>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Design Process</p>
+        <div class="process-steps">
+          <div class="process-step"><span class="step-num">01</span><div class="step-body"><p class="step-title">Mood & Direction</p><p class="step-desc">Explored visual references for premium grooming brands. Settled on a dark charcoal palette with amber accents, bold serif headings, and editorial-style photography framing.</p></div></div>
+          <div class="process-step"><span class="step-num">02</span><div class="step-body"><p class="step-title">User Flow Mapping</p><p class="step-desc">Mapped the core booking flow from app launch to confirmation. Minimized the number of steps and decisions required from the user.</p></div></div>
+          <div class="process-step"><span class="step-num">03</span><div class="step-body"><p class="step-title">Mobile-First Design</p><p class="step-desc">Designed all screens at 390×844 (iPhone 14 Pro) with bottom-heavy navigation to support thumb reachability.</p></div></div>
+          <div class="process-step"><span class="step-num">04</span><div class="step-body"><p class="step-title">Component Library</p><p class="step-desc">Built reusable mobile components: tab bars, bottom sheets, date pickers, barber cards, and booking confirmation templates.</p></div></div>
+          <div class="process-step"><span class="step-num">05</span><div class="step-body"><p class="step-title">Interactive Prototype</p><p class="step-desc">Linked screens into a complete Figma prototype covering the full booking journey with micro-interaction cues.</p></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="detail-sidebar">
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Project Info</p>
+        <div class="sidebar-item"><span class="sidebar-item-label">Type</span><span class="sidebar-item-value">Mobile App</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Role</span><span class="sidebar-item-value">UI/UX Designer</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Tool</span><span class="sidebar-item-value">Figma</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Platform</span><span class="sidebar-item-value">iOS / Android</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Year</span><span class="sidebar-item-value">2025</span></div>
+      </div>
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Design Tags</p>
+        <div class="tags" style="gap:6px">
+          <span class="tag">Figma</span><span class="tag">Mobile</span><span class="tag">Dark UI</span><span class="tag">Booking</span><span class="tag">Lifestyle</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>© 2026 Kent John C. Domalaon. All rights reserved.</footer>
+<script>
+  const saved = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved); updateThemeBtn(saved);
+  function toggleTheme() { const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light'; document.documentElement.setAttribute('data-theme', next); localStorage.setItem('theme', next); updateThemeBtn(next); }
+  function updateThemeBtn(theme) { document.querySelector('.theme-icon').textContent = theme === 'dark' ? '☀️' : '🌙'; document.querySelector('.theme-label').textContent = theme === 'dark' ? 'Light' : 'Dark'; }
+  function setImg(src, thumb) { document.getElementById('main-img').src = src; document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active')); thumb.classList.add('active'); }
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>R5 V2 Intranet — Designs — Kent John C. Domalaon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">KG.</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="designs.html" class="active">Designs</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <button class="theme-btn" onclick="toggleTheme()">
+    <span class="theme-icon">🌙</span>
+    <span class="theme-label">Dark</span>
+  </button>
+</nav>
+<div class="container">
+
+  <div class="detail-hero fade-up">
+    <a href="designs.html" class="back-link">← Back to Designs</a>
+    <h1 class="detail-title">R5 V2 Intranet</h1>
+    <div class="detail-meta">
+      <span class="tag">Figma</span>
+      <span class="tag">Enterprise</span>
+      <span class="tag">UI/UX</span>
+      <span class="tag">Dashboard</span>
+    </div>
+    <p class="detail-desc">A high-fidelity Figma design for the NTC Region V internal intranet platform. Focused on creating a clean, accessible, and data-rich interface for government staff managing telecom infrastructure across the Bicol region.</p>
+  </div>
+
+  <div class="gallery fade-up">
+    <p class="section-label" style="margin-bottom:16px">Gallery</p>
+    <div class="gallery-main">
+      <img id="main-img" src="images/preview.webp" alt="R5 V2 Intranet" />
+    </div>
+    <div class="gallery-thumbs">
+      <div class="gallery-thumb active" onclick="setImg('images/preview.webp',this)"><img src="images/preview.webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview1.webp',this)"><img src="images/preview1.webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (1).webp',this)"><img src="images/preview (1).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (2).webp',this)"><img src="images/preview (2).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (3).webp',this)"><img src="images/preview (3).webp" /></div>
+    </div>
+  </div>
+
+  <div class="detail-sections fade-up">
+    <div class="detail-main">
+      <div class="detail-block">
+        <p class="detail-block-title">Overview</p>
+        <p>The R5 V2 Intranet is a redesigned enterprise platform designed in Figma for the National Telecommunications Commission Region V. The design addresses the limitations of the legacy system by introducing a modern visual language, improved information hierarchy, and a consistent component system built for scale.</p>
+        <p>The UI was crafted with government staff in mind — prioritizing clarity, quick navigation, and data readability over visual flair.</p>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Key Features</p>
+        <ul class="feature-list">
+          <li>Dark-themed dashboard with regional data charts and KPI cards</li>
+          <li>Collapsible sidebar navigation with grouped module access</li>
+          <li>File management and document upload interface</li>
+          <li>Personnel records module with tabular data layout</li>
+          <li>Role-based access UI differentiation (Admin, Staff, Viewer)</li>
+          <li>Map-integrated telecom infrastructure monitoring screen</li>
+        </ul>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Design Process</p>
+        <div class="process-steps">
+          <div class="process-step">
+            <span class="step-num">01</span>
+            <div class="step-body"><p class="step-title">User Research & Audit</p><p class="step-desc">Interviewed NTC staff to understand daily workflows and pain points with the legacy system. Conducted a UI audit of existing screens.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">02</span>
+            <div class="step-body"><p class="step-title">Wireframing</p><p class="step-desc">Produced low-fidelity wireframes for all major screens — dashboard, records, file management, and settings — to establish layout and flow.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">03</span>
+            <div class="step-body"><p class="step-title">Design System Setup</p><p class="step-desc">Built a Figma component library: color tokens, typography scale, button variants, input states, card templates, and navigation components.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">04</span>
+            <div class="step-body"><p class="step-title">High-Fidelity Mockups</p><p class="step-desc">Applied the design system to all screens. Iterated on feedback from supervisors, refining data tables, chart layouts, and modal dialogs.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">05</span>
+            <div class="step-body"><p class="step-title">Prototype & Handoff</p><p class="step-desc">Linked screens into an interactive Figma prototype and prepared developer handoff with specs, assets, and component notes.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="detail-sidebar">
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Project Info</p>
+        <div class="sidebar-item"><span class="sidebar-item-label">Type</span><span class="sidebar-item-value">Enterprise System</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Role</span><span class="sidebar-item-value">UI/UX Designer</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Tool</span><span class="sidebar-item-value">Figma</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Context</span><span class="sidebar-item-value">NTC Region V Internship</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Year</span><span class="sidebar-item-value">2024–2025</span></div>
+      </div>
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Design Tags</p>
+        <div class="tags" style="gap:6px">
+          <span class="tag">Figma</span><span class="tag">Dashboard</span><span class="tag">Enterprise</span><span class="tag">Dark UI</span><span class="tag">Data Viz</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<footer>© 2026 Kent John C. Domalaon. All rights reserved.</footer>
+<script>
+  const saved = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved);
+  updateThemeBtn(saved);
+  function toggleTheme() {
+    const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateThemeBtn(next);
+  }
+  function updateThemeBtn(theme) {
+    document.querySelector('.theme-icon').textContent = theme === 'dark' ? '☀️' : '🌙';
+    document.querySelector('.theme-label').textContent = theme === 'dark' ? 'Light' : 'Dark';
+  }
+  function setImg(src, thumb) {
+    document.getElementById('main-img').src = src;
+    document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
