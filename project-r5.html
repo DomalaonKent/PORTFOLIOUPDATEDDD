@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>R5 V2 Intranet System — Kent John C. Domalaon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">KG.</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#designs">Designs</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <button class="theme-btn" onclick="toggleTheme()">
+    <span class="theme-icon">🌙</span>
+    <span class="theme-label">Dark</span>
+  </button>
+</nav>
+
+<div class="container">
+
+  <div class="detail-hero fade-up">
+    <a href="projects.html" class="back-link">← Back to Projects</a>
+    <h1 class="detail-title">R5 V2 Intranet System</h1>
+    <div class="detail-meta">
+      <span class="tag">Angular</span>
+      <span class="tag">FastAPI</span>
+      <span class="tag">Python</span>
+      <span class="tag">MySQL</span>
+      <span class="tag">Enterprise</span>
+    </div>
+    <p class="detail-desc">A full-scale enterprise intranet system developed during my internship at NTC Region V. It serves as the primary internal platform for staff — enabling file monitoring, regional data tracking, and administrative workflows across the Bicol region.</p>
+  </div>
+
+  <div class="gallery fade-up">
+    <p class="section-label" style="margin-bottom:16px">Gallery</p>
+    <div class="gallery-main">
+      <img id="main-img" src="images/r5-1.png" alt="R5 V2 Intranet System" />
+    </div>
+    <div class="gallery-thumbs">
+      <div class="gallery-thumb active" onclick="setImg('images/r5-1.png',this)"><img src="images/r5-1.png" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/r5-2.png',this)"><img src="images/r5-2.png" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/r5-3.png',this)"><img src="images/r5-3.png" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/r5-4.png',this)"><img src="images/r5-4.png" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/r5-figma.png',this)"><img src="images/r5-figma.png" /></div>
+    </div>
+  </div>
+
+  <div class="detail-sections fade-up">
+    <div class="detail-main">
+      <div class="detail-block">
+        <p class="detail-block-title">Overview</p>
+        <p>The R5 V2 Intranet System is a redesigned and improved version of the NTC Region V's internal web platform. Built to replace the legacy system with a more scalable, modern, and user-friendly interface that meets the day-to-day needs of NTC Region V employees.</p>
+        <p>The system aggregates data across multiple network infrastructure datasets, provides administrative dashboards, and allows management of personnel records and regulatory submissions — all in one centralized platform.</p>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Key Features</p>
+        <ul class="feature-list">
+          <li>Dashboard with real-time regional data visualization using Chart.js</li>
+          <li>File and document management system for internal regulatory records</li>
+          <li>User authentication and role-based access control (Admin, Staff, Viewer)</li>
+          <li>Telecom infrastructure monitoring with map integration</li>
+          <li>Responsive design optimized for desktop and tablet use</li>
+          <li>REST API built with FastAPI for efficient data handling</li>
+        </ul>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Development Process</p>
+        <div class="process-steps">
+          <div class="process-step">
+            <span class="step-num">01</span>
+            <div class="step-body"><p class="step-title">Requirements & Research</p><p class="step-desc">Gathered requirements from NTC supervisors, reviewed the legacy system, and identified pain points in the existing workflow.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">02</span>
+            <div class="step-body"><p class="step-title">UI Design in Figma</p><p class="step-desc">Created wireframes and high-fidelity mockups in Figma. Established a consistent dark-themed design system with clear component hierarchy.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">03</span>
+            <div class="step-body"><p class="step-title">Frontend Development (Angular)</p><p class="step-desc">Built modular Angular components, implemented routing, integrated Chart.js for data visualization, and connected to the REST API.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">04</span>
+            <div class="step-body"><p class="step-title">Backend Development (FastAPI)</p><p class="step-desc">Developed RESTful endpoints in Python FastAPI, set up MySQL database schema, and implemented JWT-based authentication.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">05</span>
+            <div class="step-body"><p class="step-title">Testing & Deployment</p><p class="step-desc">Conducted UAT with NTC staff, fixed reported bugs, and deployed the system on the internal server infrastructure.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="detail-sidebar">
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Project Info</p>
+        <div class="sidebar-item"><span class="sidebar-item-label">Type</span><span class="sidebar-item-value">Enterprise Intranet</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Role</span><span class="sidebar-item-value">Full-stack / UI Designer</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Year</span><span class="sidebar-item-value">2024–2025</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Context</span><span class="sidebar-item-value">NTC Region V Internship</span></div>
+      </div>
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Tech Stack</p>
+        <div class="tags" style="gap:6px">
+          <span class="tag">Angular</span><span class="tag">TypeScript</span><span class="tag">FastAPI</span><span class="tag">Python</span><span class="tag">MySQL</span><span class="tag">Chart.js</span><span class="tag">Figma</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>© 2026 Kent John C. Domalaon. All rights reserved.</footer>
+
+<script>
+  const saved = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved);
+  updateThemeBtn(saved);
+  function toggleTheme() {
+    const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateThemeBtn(next);
+  }
+  function updateThemeBtn(theme) {
+    document.querySelector('.theme-icon').textContent = theme === 'dark' ? '☀️' : '🌙';
+    document.querySelector('.theme-label').textContent = theme === 'dark' ? 'Light' : 'Dark';
+  }
+  function setImg(src, thumb) {
+    document.getElementById('main-img').src = src;
+    document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

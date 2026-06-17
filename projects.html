@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Kent John C. Domalaon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">KG.</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#designs">Designs</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <button class="theme-btn" onclick="toggleTheme()">
+    <span class="theme-icon">🌙</span>
+    <span class="theme-label">Dark</span>
+  </button>
+</nav>
+
+<div class="container">
+
+  <div class="page-hero fade-up">
+    <p class="section-label">Work</p>
+    <h1 class="page-title">All Projects</h1>
+    <p class="page-desc">A collection of web apps and systems built during internship and personal projects — focused on clean UX and functional design.</p>
+  </div>
+
+  <section class="fade-up">
+    <div class="projects-grid projects-grid-3">
+      <a href="project-r5.html" class="project-card">
+        <img class="project-card-img" src="images/r5-1.png" alt="R5 V2 Intranet System" />
+        <div class="project-card-info">
+          <p class="project-card-title">R5 V2 Intranet System</p>
+          <p class="project-card-sub">Angular + FastAPI · Enterprise</p>
+        </div>
+      </a>
+      <a href="project-alphatera.html" class="project-card">
+        <img class="project-card-img" src="images/alpha-1.png" alt="Alphatera Construction Supply" />
+        <div class="project-card-info">
+          <p class="project-card-title">Alphatera Construction Supply</p>
+          <p class="project-card-sub">Angular + CoreUI · Web Platform</p>
+        </div>
+      </a>
+      <a href="project-ntc.html" class="project-card">
+        <img class="project-card-img" src="images/ntc-1.png" alt="NTC Region V Website" />
+        <div class="project-card-info">
+          <p class="project-card-title">NTC Region V Website</p>
+          <p class="project-card-sub">Angular + Tailwind · Government</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+</div>
+
+<footer>© 2026 Kent John C. Domalaon. All rights reserved.</footer>
+
+<script>
+  const saved = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved);
+  updateThemeBtn(saved);
+  function toggleTheme() {
+    const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateThemeBtn(next);
+  }
+  function updateThemeBtn(theme) {
+    document.querySelector('.theme-icon').textContent = theme === 'dark' ? '☀️' : '🌙';
+    document.querySelector('.theme-label').textContent = theme === 'dark' ? 'Light' : 'Dark';
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

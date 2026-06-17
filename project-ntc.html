@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NTC Region V Website — Kent John C. Domalaon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">KG.</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#designs">Designs</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <button class="theme-btn" onclick="toggleTheme()">
+    <span class="theme-icon">🌙</span>
+    <span class="theme-label">Dark</span>
+  </button>
+</nav>
+
+<div class="container">
+
+  <div class="detail-hero fade-up">
+    <a href="projects.html" class="back-link">← Back to Projects</a>
+    <h1 class="detail-title">NTC Region V Company Website</h1>
+    <div class="detail-meta">
+      <span class="tag">Angular</span>
+      <span class="tag">Tailwind CSS</span>
+      <span class="tag">Government</span>
+    </div>
+    <p class="detail-desc">The official company website redesign for the National Telecommunications Commission (NTC) Region V, developed during internship. Built with Angular and Tailwind CSS — providing an accessible, modern digital front for the government agency featuring service info, news, public advisories, and contact details for the Bicol Region office.</p>
+  </div>
+
+  <div class="gallery fade-up">
+    <p class="section-label" style="margin-bottom:16px">Gallery</p>
+    <div class="gallery-main">
+      <img id="main-img" src="images/ntc-1.png" alt="NTC Region V Website" />
+    </div>
+    <div class="gallery-thumbs">
+      <div class="gallery-thumb active" onclick="setImg('images/ntc-1.png',this)"><img src="images/ntc-1.png" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/ntc-2.png',this)"><img src="images/ntc-2.png" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/ntc-3.png',this)"><img src="images/ntc-3.png" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/ntc-4.png',this)"><img src="images/ntc-4.png" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/ntc-5.png',this)"><img src="images/ntc-5.png" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/ntc-6.png',this)"><img src="images/ntc-6.png" /></div>
+    </div>
+  </div>
+
+  <div class="detail-sections fade-up">
+    <div class="detail-main">
+      <div class="detail-block">
+        <p class="detail-block-title">Overview</p>
+        <p>NTC Region V needed an updated public-facing website that clearly communicates services, regulatory news, and contact information to citizens in the Bicol region. The site needed to be accessible, fast-loading, and consistent with government branding standards.</p>
+        <p>I led the frontend development and UI design — redesigning each page from scratch using Angular components and Tailwind CSS, with a clean, professional look fitting a government agency.</p>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Key Features</p>
+        <ul class="feature-list">
+          <li>Homepage with hero section, announcements, and quick service access</li>
+          <li>Services directory covering NTC regulatory and licensing services</li>
+          <li>News and advisories page with dynamic content sections</li>
+          <li>Contact page with office information and inquiry form</li>
+          <li>Fully responsive layout optimized for mobile citizens</li>
+          <li>Angular routing for single-page app navigation</li>
+          <li>Tailwind CSS utility-first styling for consistent design system</li>
+        </ul>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Development Process</p>
+        <div class="process-steps">
+          <div class="process-step">
+            <span class="step-num">01</span>
+            <div class="step-body"><p class="step-title">Content Audit & Information Architecture</p><p class="step-desc">Reviewed the existing NTC website, identified content gaps, and restructured the information architecture for better public access and navigation.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">02</span>
+            <div class="step-body"><p class="step-title">UI Design (Figma)</p><p class="step-desc">Wireframed all pages and produced high-fidelity Figma mockups. Applied NTC's official color palette while modernizing the visual language.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">03</span>
+            <div class="step-body"><p class="step-title">Frontend Build (Angular + Tailwind)</p><p class="step-desc">Implemented reusable Angular components. Used Tailwind CSS for rapid responsive styling, ensuring pixel-accurate implementation of the Figma designs.</p></div>
+          </div>
+          <div class="process-step">
+            <span class="step-num">04</span>
+            <div class="step-body"><p class="step-title">Review & Handoff</p><p class="step-desc">Presented the final website to NTC supervisors, incorporated feedback, and prepared the codebase for internal deployment on the agency's hosting infrastructure.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="detail-sidebar">
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Project Info</p>
+        <div class="sidebar-item"><span class="sidebar-item-label">Type</span><span class="sidebar-item-value">Government Website</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Role</span><span class="sidebar-item-value">Frontend / UI Designer</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Year</span><span class="sidebar-item-value">2024–2025</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Context</span><span class="sidebar-item-value">NTC Region V Internship</span></div>
+      </div>
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Tech Stack</p>
+        <div class="tags" style="gap:6px">
+          <span class="tag">Angular</span><span class="tag">Tailwind CSS</span><span class="tag">TypeScript</span><span class="tag">Figma</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>© 2026 Kent John C. Domalaon. All rights reserved.</footer>
+
+<script>
+  const saved = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved);
+  updateThemeBtn(saved);
+  function toggleTheme() {
+    const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateThemeBtn(next);
+  }
+  function updateThemeBtn(theme) {
+    document.querySelector('.theme-icon').textContent = theme === 'dark' ? '☀️' : '🌙';
+    document.querySelector('.theme-label').textContent = theme === 'dark' ? 'Light' : 'Dark';
+  }
+  function setImg(src, thumb) {
+    document.getElementById('main-img').src = src;
+    document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

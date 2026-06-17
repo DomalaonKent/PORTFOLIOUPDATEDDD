@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kent John C. Domalaon — UI/UX Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">KG.</a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#designs">Designs</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="theme-btn" onclick="toggleTheme()">
+    <span class="theme-icon">🌙</span>
+    <span class="theme-label">Dark</span>
+  </button>
+</nav>
+
+<div class="container">
+
+  <!-- HERO -->
+  <section class="hero fade-up">
+    <img id="hero-photo" class="hero-photo" src="images/business.jfif" alt="Kent John C. Domalaon" onerror="this.style.background='#ccc';this.removeAttribute('src')" />
+    <div class="hero-content">
+      <h1 class="hero-name">Kent John C. Domalaon</h1>
+      <p class="hero-role">UI/UX Designer <span>/</span> Frontend Developer</p>
+      <div class="hero-badges">
+        <span class="badge">📍 Bacoor, Cavite, PH</span>
+        <span class="badge primary">🎓 BS Information Technology</span>
+      </div>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">✉ Contact Me</a>
+        <a href="#designs" class="btn">⊞ View Designs</a>
+        <a href="projects.html" class="btn">⇌ Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="fade-up">
+    <div class="section-header"><div><p class="section-label">About</p></div></div>
+    <p class="about-text">I'm a UI/UX Designer and Frontend Developer focused on crafting clean, functional interfaces that solve real problems. I specialize in Figma for design and build with Angular, HTML/CSS, and JavaScript. Currently a BS Information Technology student at Cavite State University – Bacoor, with hands-on internship experience at NTC Region V.</p>
+    <a href="#" class="btn" style="margin-top:4px">Read more →</a>
+  </section>
+
+  <!-- TECH STACK -->
+  <section id="stack" class="fade-up">
+    <div class="section-header"><div><p class="section-label">Tech Stack</p><h2 class="section-title">What I work with</h2></div></div>
+    <div class="stack-group">
+      <p class="stack-label">Design</p>
+      <div class="tags">
+        <span class="tag">Figma</span><span class="tag">Wireframing</span><span class="tag">Prototyping</span><span class="tag">UI Systems</span><span class="tag">User Research</span>
+      </div>
+    </div>
+    <div class="stack-group">
+      <p class="stack-label">Frontend</p>
+      <div class="tags">
+        <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">Angular</span><span class="tag">Tailwind CSS</span>
+      </div>
+    </div>
+    <div class="stack-group">
+      <p class="stack-label">Backend & Tools</p>
+      <div class="tags">
+        <span class="tag">PHP</span><span class="tag">Python</span><span class="tag">MySQL</span><span class="tag">Git</span><span class="tag">FastAPI</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENT PROJECTS -->
+  <section id="projects" class="fade-up">
+    <div class="section-header">
+      <div><p class="section-label">Work</p><h2 class="section-title">Recent Projects</h2></div>
+      <a href="projects.html" class="view-all">View All →</a>
+    </div>
+    <div class="projects-grid">
+      <a href="project-r5.html" class="project-card">
+        <img class="project-card-img" src="images/r5-1.png" alt="R5 V2 Intranet System" />
+        <div class="project-card-info">
+          <p class="project-card-title">R5 V2 Intranet System</p>
+          <p class="project-card-sub">Angular + FastAPI · Enterprise</p>
+        </div>
+      </a>
+      <a href="project-alphatera.html" class="project-card">
+        <img class="project-card-img" src="images/alpha-1.png" alt="Alphatera Construction Supply" />
+        <div class="project-card-info">
+          <p class="project-card-title">Alphatera Construction Supply</p>
+          <p class="project-card-sub">Angular · Web Platform</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- UI/UX DESIGNS -->
+  <section id="designs" class="fade-up">
+    <div class="section-header">
+      <div><p class="section-label">Design</p><h2 class="section-title">UI/UX Designs</h2></div>
+      <a href="#" class="view-all">View All →</a>
+    </div>
+    <div class="designs-grid">
+      <div class="design-card">
+        <img src="images/r5-1.png" alt="R5 Intranet" />
+        <div class="design-card-info"><p class="design-card-title">R5 Intranet</p><p class="design-card-sub">Enterprise</p></div>
+      </div>
+      <div class="design-card">
+        <img src="images/alpha-1.png" alt="Alphatera" />
+        <div class="design-card-info"><p class="design-card-title">Alphatera</p><p class="design-card-sub">B2B Platform</p></div>
+      </div>
+      <div class="design-card">
+        <img src="images/ntc-1.png" alt="NTC Website" />
+        <div class="design-card-info"><p class="design-card-title">NTC Website</p><p class="design-card-sub">Government</p></div>
+      </div>
+      <div class="design-card">
+        <img src="images/r5-figma.png" alt="R5 Prototype" />
+        <div class="design-card-info"><p class="design-card-title">R5 Prototype</p><p class="design-card-sub">Figma Prototype</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="fade-up">
+    <div class="section-header"><div><p class="section-label">Contact</p><h2 class="section-title">Get in touch</h2></div></div>
+    <p class="about-text">Open for freelance work, collaborations, and opportunities. Feel free to reach out!</p>
+    <div style="display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;">
+      <a href="mailto:kentjohn@email.com" class="btn btn-primary">✉ Send Email</a>
+      <a href="https://github.com/" target="_blank" class="btn">GitHub</a>
+      <a href="https://linkedin.com/" target="_blank" class="btn">LinkedIn</a>
+    </div>
+  </section>
+
+</div>
+
+<footer>© 2026 Kent John C. Domalaon. All rights reserved.</footer>
+
+<script>
+  const saved = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved);
+  updateThemeBtn(saved);
+
+  function toggleTheme() {
+    const curr = document.documentElement.getAttribute('data-theme');
+    const next = curr === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateThemeBtn(next);
+   const photo = document.getElementById('hero-photo');
+    if (photo) {
+    photo.src = theme === 'dark' ? 'images/grad.png' : 'images/business.jfif';
+    photo.style.objectPosition = theme === 'dark' ? 'center 20%' : 'center 8%';
+    }
+  }
+
+  function updateThemeBtn(theme) {
+    document.querySelector('.theme-icon').textContent = theme === 'dark' ? '☀️' : '🌙';
+    document.querySelector('.theme-label').textContent = theme === 'dark' ? 'Light' : 'Dark';
+    const photo = document.getElementById('hero-photo');
+    if (photo) {
+    photo.src = theme === 'dark' ? 'images/grad.png' : 'images/business.jfif';
+    photo.style.objectPosition = theme === 'dark' ? 'center 20%' : 'center 8%';
+    }
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
