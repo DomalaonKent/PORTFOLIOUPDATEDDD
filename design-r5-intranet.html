@@ -30,14 +30,14 @@
     <h1 class="detail-title">R5 V2 Intranet</h1>
     <div class="detail-meta">
       <span class="tag">Figma</span>
-      <span class="tag">Enterprise</span>
+      <span class="tag">Enterprise Dashboard</span>
       <span class="tag">UI/UX</span>
-      <span class="tag">Dashboard</span>
+      <span class="tag">Dark UI</span>
     </div>
-    <p class="detail-desc">A high-fidelity Figma design for the NTC Region V internal intranet platform. Focused on creating a clean, accessible, and data-rich interface for government staff managing telecom infrastructure across the Bicol region.</p>
+    <p class="detail-desc">A comprehensive enterprise intranet redesign for NTC Region V. The platform helps staff access regulatory data, documents, and telecom infrastructure monitoring through a clean, dark-themed interface optimized for long working hours and quick information scanning.</p>
   </div>
 
-    <div class="gallery fade-up">
+  <div class="gallery fade-up">
     <p class="section-label" style="margin-bottom:16px">Gallery</p>
     
     <div class="mockup-container laptop-mockup">
@@ -47,6 +47,18 @@
             <span class="laptop-dot"></span><span class="laptop-dot"></span><span class="laptop-dot"></span>
             <div class="laptop-urlbar"></div>
           </div>
+          <img id="main-img" src="images/preview.webp" alt="Design preview" class="mockup-img" />
+        </div>
+        <div class="laptop-base"><div class="laptop-notch-base"></div></div>
+      </div>
+    </div>
+    <div class="slide-controls">
+      <button class="slide-btn" onclick="prevSlide()">&#8592;</button>
+      <div class="slide-dots"><span class="slide-dot active" onclick="goSlide(0)"></span><span class="slide-dot" onclick="goSlide(1)"></span><span class="slide-dot" onclick="goSlide(2)"></span><span class="slide-dot" onclick="goSlide(3)"></span></div>
+      <button class="slide-btn" onclick="nextSlide()">&#8594;</button>
+    </div>
+  </div>
+
   <div class="detail-sections fade-up">
     <div class="detail-main">
       <div class="detail-block">
@@ -55,7 +67,7 @@
       </div>
       <div class="detail-block">
         <p class="detail-block-title">Solution</p>
-        <p>Redesigned the platform from scratch in Figma with a focus on clarity and efficiency. Introduced a collapsible sidebar, role-based dashboards, and a dark-themed visual system that reduced eye strain during long working hours. Data tables and KPI cards were redesigned for faster scanning.</p>
+        <p>Redesigned the platform from scratch in Figma with a focus on clarity and efficiency. Introduced a collapsible sidebar, role-based dashboards, and a dark-themed visual system that reduces eye strain during long working hours. Data tables and KPI cards were redesigned for faster scanning.</p>
       </div>
       <div class="detail-block">
         <p class="detail-block-title">Key Features</p>
@@ -63,9 +75,9 @@
           <li>Dark-themed dashboard with regional data charts and KPI cards</li>
           <li>Collapsible sidebar navigation with grouped module access</li>
           <li>File management and document upload interface</li>
-          <li>Personnel records module with tabular data layout</li>
-          <li>Role-based access UI differentiation (Admin, Staff, Viewer)</li>
-          <li>Map-integrated telecom infrastructure monitoring screen</li>
+          <li>Role-based dashboard views for different staff levels</li>
+          <li>Telecom infrastructure monitoring section with real-time alerts</li>
+          <li>Responsive design for tablet and mobile access</li>
         </ul>
       </div>
       <div class="detail-block">
@@ -73,23 +85,19 @@
         <div class="process-steps">
           <div class="process-step">
             <span class="step-num">01</span>
-            <div class="step-body"><p class="step-title">User Research & Audit</p><p class="step-desc">Interviewed NTC staff to understand daily workflows and pain points with the legacy system. Conducted a UI audit of existing screens.</p></div>
+            <div class="step-body"><p class="step-title">User Research</p><p class="step-desc">Interviewed NTC staff to understand pain points with the legacy system and key workflows for regulatory compliance, document management, and data monitoring.</p></div>
           </div>
           <div class="process-step">
             <span class="step-num">02</span>
-            <div class="step-body"><p class="step-title">Wireframing</p><p class="step-desc">Produced low-fidelity wireframes for all major screens — dashboard, records, file management, and settings — to establish layout and flow.</p></div>
+            <div class="step-body"><p class="step-title">Information Architecture</p><p class="step-desc">Restructured the navigation and layout to prioritize quick access to regulatory data, documents, and monitoring dashboards based on user roles.</p></div>
           </div>
           <div class="process-step">
             <span class="step-num">03</span>
-            <div class="step-body"><p class="step-title">Design System Setup</p><p class="step-desc">Built a Figma component library: color tokens, typography scale, button variants, input states, card templates, and navigation components.</p></div>
+            <div class="step-body"><p class="step-title">Visual Design</p><p class="step-desc">Developed a dark theme to reduce eye strain and established a component system for dashboards, data tables, and KPI cards with clear visual hierarchy.</p></div>
           </div>
           <div class="process-step">
             <span class="step-num">04</span>
-            <div class="step-body"><p class="step-title">High-Fidelity Mockups</p><p class="step-desc">Applied the design system to all screens. Iterated on feedback from supervisors, refining data tables, chart layouts, and modal dialogs.</p></div>
-          </div>
-          <div class="process-step">
-            <span class="step-num">05</span>
-            <div class="step-body"><p class="step-title">Prototype & Handoff</p><p class="step-desc">Linked screens into an interactive Figma prototype and prepared developer handoff with specs, assets, and component notes.</p></div>
+            <div class="step-body"><p class="step-title">Prototype & Iteration</p><p class="step-desc">Created a clickable Figma prototype and gathered feedback from key users to refine the layout, navigation patterns, and data visualization.</p></div>
           </div>
         </div>
       </div>
@@ -97,7 +105,7 @@
     <div class="detail-sidebar">
       <div class="sidebar-block">
         <p class="sidebar-block-title">Project Info</p>
-        <div class="sidebar-item"><span class="sidebar-item-label">Type</span><span class="sidebar-item-value">Enterprise System</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Type</span><span class="sidebar-item-value">Enterprise Dashboard</span></div>
         <div class="sidebar-item"><span class="sidebar-item-label">Role</span><span class="sidebar-item-value">UI/UX Designer</span></div>
         <div class="sidebar-item"><span class="sidebar-item-label">Tool</span><span class="sidebar-item-value">Figma</span></div>
         <div class="sidebar-item"><span class="sidebar-item-label">Context</span><span class="sidebar-item-value">NTC Region V Internship</span></div>
@@ -127,11 +135,6 @@
   function updateThemeBtn(theme) {
     document.querySelector('.theme-icon').textContent = theme === 'dark' ? '☀️' : '🌙';
     document.querySelector('.theme-label').textContent = theme === 'dark' ? 'Light' : 'Dark';
-  }
-  function setImg(src, thumb) {
-    document.getElementById('main-img').src = src;
-    document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
-    thumb.classList.add('active');
   }
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
@@ -175,7 +178,7 @@
 .mockup-img.fading { opacity:0; }
 </style>
 <script>
-const _slides = ["images/preview (24).webp","images/preview (25).webp","images/preview (26).webp","images/preview (27).webp"];
+const _slides = ["images/preview.webp","images/preview (1).webp","images/preview (2).webp","images/preview (3).webp"];
 let _cur = 0, _timer = null;
 function _updateSlide() {
   const img = document.getElementById('main-img');

@@ -37,7 +37,7 @@
     <p class="detail-desc">A bold, industrial-themed UI/UX design for Alphatera Construction Supply — a B2B platform for construction materials. Designed in Figma to communicate strength, reliability, and professionalism through dark tones and structured layouts.</p>
   </div>
 
-    <div class="gallery fade-up">
+  <div class="gallery fade-up">
     <p class="section-label" style="margin-bottom:16px">Gallery</p>
     
     <div class="mockup-container laptop-mockup">
@@ -55,19 +55,6 @@
     <div class="slide-controls">
       <button class="slide-btn" onclick="prevSlide()">&#8592;</button>
       <div class="slide-dots"><span class="slide-dot active" onclick="goSlide(0)"></span><span class="slide-dot" onclick="goSlide(1)"></span><span class="slide-dot" onclick="goSlide(2)"></span></div>
-      <button class="slide-btn" onclick="nextSlide()">&#8594;</button>
-    </div>
-  </div>
-          <img id="main-img" src="images/preview (4).webp" alt="Design preview" class="mockup-img" />
-        </div>
-        <div class="laptop-base">
-          <div class="laptop-notch-base"></div>
-        </div>
-      </div>
-    </div>
-    <div class="slide-controls">
-      <button class="slide-btn" onclick="prevSlide()">&#8592;</button>
-      <div class="slide-dots"><span class="slide-dot active" onclick="goSlide(0)"></span><span class="slide-dot" onclick="goSlide(1)"></span><span class="slide-dot" onclick="goSlide(2)"></span><span class="slide-dot" onclick="goSlide(3)"></span></div>
       <button class="slide-btn" onclick="nextSlide()">&#8594;</button>
     </div>
   </div>
@@ -148,11 +135,6 @@
   function updateThemeBtn(theme) {
     document.querySelector('.theme-icon').textContent = theme === 'dark' ? '☀️' : '🌙';
     document.querySelector('.theme-label').textContent = theme === 'dark' ? 'Light' : 'Dark';
-  }
-  function setImg(src, thumb) {
-    document.getElementById('main-img').src = src;
-    document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
-    thumb.classList.add('active');
   }
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
