@@ -14,10 +14,10 @@
   <a href="index.html" class="nav-logo">KG.</a>
   <ul class="nav-links">
     <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="#about">About</a></li>
+    <li><a href="about.html">About</a></li>
     <li><a href="designs.html">Designs</a></li>
     <li><a href="projects.html">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
   <button class="theme-btn" onclick="toggleTheme()">
     <span class="theme-icon">🌙</span>
@@ -34,46 +34,142 @@
       <h1 class="hero-name">Kent John C. Domalaon</h1>
       <p class="hero-role">UI/UX Designer <span>/</span> Frontend Developer</p>
       <div class="hero-badges">
-        <span class="badge">📍 Bacoor, Cavite, PH</span>
+        <span class="badge">📍 Prieto Diaz, Sorsogon PH</span>
         <span class="badge primary">🎓 BS Information Technology</span>
       </div>
       <div class="hero-ctas">
         <a href="#contact" class="btn btn-primary">✉ Contact Me</a>
         <a href="#designs" class="btn">⊞ View Designs</a>
         <a href="projects.html" class="btn">⇌ Projects</a>
+        <a href="https://drive.google.com/file/d/1i4I7tJrMoaEebZym_XCge63F6ZTarC7j/view" target="_blank" class="btn btn-resume">↓ Resume</a>
       </div>
+      <style>
+        .btn-resume { font-weight: 600; }
+        .btn-resume:hover { background: var(--text); color: var(--bg); border-color: var(--text); }
+      </style>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about" class="fade-up">
     <div class="section-header"><div><p class="section-label">About</p></div></div>
-    <p class="about-text">I'm a UI/UX Designer and Frontend Developer focused on crafting clean, functional interfaces that solve real problems. I specialize in Figma for design and build with Angular, HTML/CSS, and JavaScript. Currently a BS Information Technology student at Cavite State University – Bacoor, with hands-on internship experience at NTC Region V.</p>
-    <a href="#" class="btn" style="margin-top:4px">Read more →</a>
+    <p class="about-text">I'm a UI/UX Designer and Frontend Developer focused on crafting clean, functional interfaces that solve real problems. I specialize in Figma for design and build with Angular, HTML/CSS, and JavaScript. Currently a BS Information Technology student at Computer Communication Development Institute – Sorsogon, with hands-on internship experience at NTC Region V.</p>
+    <a href="about.html" class="btn" style="margin-top:4px">Read more →</a>
   </section>
 
   <!-- TECH STACK -->
   <section id="stack" class="fade-up">
     <div class="section-header"><div><p class="section-label">Tech Stack</p><h2 class="section-title">What I work with</h2></div></div>
-    <div class="stack-group">
-      <p class="stack-label">Design</p>
-      <div class="tags">
-        <span class="tag">Figma</span><span class="tag">Wireframing</span><span class="tag">Prototyping</span><span class="tag">UI Systems</span><span class="tag">User Research</span>
+
+    <style>
+      .marquee-wrapper {
+        overflow: hidden;
+        position: relative;
+        margin: 0 -48px;
+        padding: 0;
+      }
+      .marquee-wrapper::before,
+      .marquee-wrapper::after {
+        content: '';
+        position: absolute;
+        top: 0; bottom: 0;
+        width: 80px;
+        z-index: 2;
+        pointer-events: none;
+      }
+      .marquee-wrapper::before { left: 0; background: linear-gradient(to right, var(--bg), transparent); }
+      .marquee-wrapper::after  { right: 0; background: linear-gradient(to left, var(--bg), transparent); }
+
+      .marquee-row { display: flex; gap: 0; margin-bottom: 14px; }
+      .marquee-row:last-child { margin-bottom: 0; }
+
+      .marquee-track {
+        display: flex;
+        gap: 12px;
+        animation: marquee-scroll 28s linear infinite;
+        width: max-content;
+      }
+      .marquee-row.reverse .marquee-track {
+        animation-direction: reverse;
+        animation-duration: 32s;
+      }
+
+      @keyframes marquee-scroll {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+
+      .marquee-wrapper:hover .marquee-track { animation-play-state: paused; }
+
+      .tech-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        padding: 10px 18px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 100px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: var(--text);
+        white-space: nowrap;
+        flex-shrink: 0;
+        transition: border-color 0.2s;
+      }
+      .tech-pill:hover { border-color: var(--text); }
+      .tech-pill img { width: 20px; height: 20px; object-fit: contain; }
+      .tech-pill svg { width: 20px; height: 20px; flex-shrink: 0; }
+    </style>
+
+    <div class="marquee-wrapper">
+
+      <!-- Row 1: Design + Frontend -->
+      <div class="marquee-row">
+        <div class="marquee-track" id="row1"></div>
       </div>
-    </div>
-    <div class="stack-group">
-      <p class="stack-label">Frontend</p>
-      <div class="tags">
-        <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">Angular</span><span class="tag">Tailwind CSS</span>
+
+      <!-- Row 2: Backend + Tools (reverse) -->
+      <div class="marquee-row reverse">
+        <div class="marquee-track" id="row2"></div>
       </div>
-    </div>
-    <div class="stack-group">
-      <p class="stack-label">Backend & Tools</p>
-      <div class="tags">
-        <span class="tag">PHP</span><span class="tag">Python</span><span class="tag">MySQL</span><span class="tag">Git</span><span class="tag">FastAPI</span>
-      </div>
+
     </div>
   </section>
+
+  <script>
+    const row1Items = [
+      { name: 'Figma', svg: `<svg viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 28.5A9.5 9.5 0 1 1 28.5 19 9.5 9.5 0 0 1 19 28.5z" fill="#1ABCFE"/><path d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 0 1-19 0z" fill="#0ACF83"/><path d="M19 0v19h9.5a9.5 9.5 0 0 0 0-19z" fill="#FF7262"/><path d="M0 9.5a9.5 9.5 0 0 0 9.5 9.5H19V0H9.5A9.5 9.5 0 0 0 0 9.5z" fill="#F24E1E"/><path d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z" fill="#A259FF"/></svg>` },
+      { name: 'HTML5', svg: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z" fill="#E34F26"/></svg>` },
+      { name: 'CSS3', svg: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z" fill="#1572B6"/></svg>` },
+      { name: 'JavaScript', svg: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z" fill="#F7DF1E"/></svg>` },
+      { name: 'TypeScript', svg: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z" fill="#3178C6"/></svg>` },
+      { name: 'Angular', svg: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.931 12.645h4.138l-2.07-4.908m0-7.737L.68 3.982l1.726 14.771L12 24l9.586-5.242L23.32 3.982 11.999.0zm7.064 18.31h-2.717l-1.379-3.351H8.05l-1.38 3.351H3.945L12 2.754z" fill="#DD0031"/></svg>` },
+      { name: 'Tailwind', svg: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z" fill="#38BDF8"/></svg>` },
+      { name: 'Python', svg: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.007 2.752h5.816v.826H3.9S0 5.789 0 11.969c0 6.18 3.403 5.96 3.403 5.96h2.031v-2.867s-.109-3.404 3.345-3.404h5.762s3.236.052 3.236-3.127V3.148S18.28 0 11.914 0zm-3.2 1.818a1.047 1.047 0 1 1 0 2.095 1.047 1.047 0 0 1 0-2.095z" fill="#3776AB"/><path d="M12.086 24c6.094 0 5.714-2.656 5.714-2.656l-.007-2.752h-5.816v-.826h8.123S24 18.211 24 12.031c0-6.18-3.403-5.96-3.403-5.96h-2.031v2.867s.109 3.404-3.345 3.404H9.459S6.223 12.29 6.223 15.469v5.383S5.72 24 12.086 24zm3.2-1.818a1.047 1.047 0 1 1 0-2.094 1.047 1.047 0 0 1 0 2.094z" fill="#FFD43B"/></svg>` },
+      { name: 'MySQL', svg: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.273.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.126-.1-.18-.153zM5.77 18.695h-.927a50.854 50.854 0 0 0-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a72.892 72.892 0 0 0-.195 4.41H0c.055-1.966.192-3.81.41-5.53h1.15l1.335 4.064h.008l1.347-4.064h1.095c.242 1.966.378 3.81.428 5.53zm4.017-4.08a.898.898 0 0 0-.268-.196 1.37 1.37 0 0 0-.488-.1c-.23 0-.44.06-.617.173-.178.115-.317.264-.41.45a2.47 2.47 0 0 0-.218.63 4.006 4.006 0 0 0-.075.784c0 .274.025.523.075.745.05.222.13.413.23.572.104.16.237.284.392.374.158.092.344.135.55.135.246 0 .466-.068.654-.19.19-.125.35-.302.48-.532l.67.468c-.18.336-.43.6-.748.79-.32.192-.695.288-1.12.288-.343 0-.65-.066-.912-.195a1.896 1.896 0 0 1-.67-.547 2.488 2.488 0 0 1-.41-.836 3.867 3.867 0 0 1-.14-1.063c0-.4.05-.77.154-1.1.103-.332.258-.618.46-.855.205-.238.46-.424.757-.557.3-.134.645-.2 1.035-.2.36 0 .68.07.962.21.285.14.525.348.72.624l-.722.532zm5.962 4.08H14.63v-2.172c0-.43-.016-.735-.048-.913a.895.895 0 0 0-.145-.408.35.35 0 0 0-.296-.145c-.147 0-.282.05-.41.148a1.01 1.01 0 0 0-.3.435 3.576 3.576 0 0 0-.1 1.02v2.035h-1.117v-3.568h1.032v.523h.016c.11-.2.267-.355.47-.467.2-.112.433-.17.695-.17.228 0 .42.05.578.15.16.1.286.245.375.436.088.19.143.42.163.69.02.272.03.578.03.92v2.485zm2.727 0h-1.117v-3.568h1.117v3.568zm-.556-4.09a.627.627 0 0 1-.442-.177.577.577 0 0 1-.185-.43c0-.168.06-.313.18-.432a.613.613 0 0 1 .446-.178c.172 0 .32.06.44.178.12.12.18.264.18.433a.58.58 0 0 1-.18.43.617.617 0 0 1-.44.177zM24 18.695h-.96l-.91-2.986-.013.014-.918 2.972h-.945l-1.404-3.568h1.136l.818 2.986h.013l.886-2.986h.93l.887 2.986h.012l.84-2.986H24L22.6 18.695z" fill="#4479A1"/></svg>` },
+      { name: 'Git', svg: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.606-.404-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187" fill="#F05032"/></svg>` },
+      { name: 'PHP', svg: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 5.793C5.373 5.793 0 8.557 0 12c0 3.443 5.373 6.207 12 6.207S24 15.443 24 12c0-3.443-5.373-6.207-12-6.207zm-1.143 2.43h1.236l-.338 1.71h1.044c.627 0 1.055.105 1.285.318.228.21.291.563.186 1.059l-.428 2.14h-1.25l.4-2.01c.054-.266.028-.446-.08-.54-.107-.09-.324-.133-.65-.133H11.07l-.537 2.683H9.297l1.56-7.227zm-5.24.6h2.25c.705 0 1.206.166 1.506.498.3.33.366.834.197 1.508l-.007.032c-.19.763-.535 1.318-1.034 1.668-.5.348-1.14.52-1.92.52H5.684l-.37 1.87H4.08l1.538-6.096zm8.49 0h2.25c.705 0 1.206.166 1.506.498.3.33.366.834.197 1.508l-.007.032c-.19.763-.535 1.318-1.034 1.668-.5.348-1.14.52-1.92.52h-.926l-.37 1.87h-1.235l1.538-6.096zm-7.266 1.015l-.477 1.894h.795c.448 0 .79-.095 1.025-.286.237-.19.4-.497.49-.92l.007-.032c.08-.374.047-.635-.099-.785-.146-.148-.41-.222-.793-.222h-.948zm8.49 0l-.477 1.894h.795c.448 0 .79-.095 1.025-.286.237-.19.4-.497.49-.92l.007-.032c.08-.374.047-.635-.099-.785-.146-.148-.41-.222-.793-.222h-.948z" fill="#777BB4"/></svg>` },
+      { name: 'FastAPI', svg: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.376 0 0 5.376 0 12c0 6.624 5.376 12 12 12 6.624 0 12-5.376 12-12 0-6.624-5.376-12-12-12zm-.624 21.552v-7.704H6.48L13.08 2.448v7.704h4.992z" fill="#009688"/></svg>` },
+    ];
+
+    function buildRow(trackId, items) {
+      const track = document.getElementById(trackId);
+      if (!track) return;
+      // Double the items for seamless loop
+      const doubled = [...items, ...items];
+      doubled.forEach(({ name, svg }) => {
+        const pill = document.createElement('span');
+        pill.className = 'tech-pill';
+        pill.innerHTML = svg + name;
+        track.appendChild(pill);
+      });
+    }
+
+    const row1 = row1Items.slice(0, 7);
+    const row2 = row1Items.slice(7);
+    buildRow('row1', row1);
+    buildRow('row2', [...row2, ...row1Items.slice(0, 4)]);
+  </script>
 
   <!-- RECENT PROJECTS -->
   <section id="projects" class="fade-up">
@@ -127,13 +223,142 @@
 
   <!-- CONTACT -->
   <section id="contact" class="fade-up">
-    <div class="section-header"><div><p class="section-label">Contact</p><h2 class="section-title">Get in touch</h2></div></div>
+    <div class="section-header">
+      <div><p class="section-label">Contact</p><h2 class="section-title">Get in touch</h2></div>
+      <a href="contact.html" class="view-all">View All →</a>
+    </div>
     <p class="about-text">Open for freelance work, collaborations, and opportunities. Feel free to reach out!</p>
     <div style="display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;">
-      <a href="mailto:kentjohn@email.com" class="btn btn-primary">✉ Send Email</a>
+      <a href="mailto:bryllim@gmail.com" class="btn btn-primary">✉ Email Me</a>
+      <a href="https://www.facebook.com/" target="_blank" class="btn">Facebook</a>
+      <a href="https://www.instagram.com/" target="_blank" class="btn">Instagram</a>
       <a href="https://github.com/" target="_blank" class="btn">GitHub</a>
-      <a href="https://linkedin.com/" target="_blank" class="btn">LinkedIn</a>
     </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="fade-up">
+    <div class="section-header"><div><p class="section-label">Gallery</p><h2 class="section-title">Gallery</h2></div></div>
+
+    <style>
+      .gallery-slider {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+      }
+      .gallery-track {
+        display: flex;
+        gap: 10px;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .gallery-slide {
+        flex-shrink: 0;
+        width: calc((100% - 40px) / 5);
+        height: 220px;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+      }
+      .gallery-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        display: block;
+        transition: transform 0.3s;
+      }
+      .gallery-slide:hover img { transform: scale(1.04); }
+
+      .gallery-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 16px;
+      }
+      .gallery-arrows { display: flex; gap: 8px; }
+      .gallery-arrow {
+        width: 36px; height: 36px;
+        border-radius: 50%;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        color: var(--text);
+        font-size: 1rem;
+        cursor: pointer;
+        display: flex; align-items: center; justify-content: center;
+        transition: all 0.2s;
+      }
+      .gallery-arrow:hover { border-color: var(--text); }
+      .gallery-dots { display: flex; gap: 6px; }
+      .gallery-dot {
+        width: 6px; height: 6px;
+        border-radius: 50%;
+        background: var(--border);
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .gallery-dot.active { background: var(--text); width: 18px; border-radius: 3px; }
+    </style>
+
+    <div class="gallery-slider">
+      <div class="gallery-track" id="galleryTrack">
+        <div class="gallery-slide"><img src="images/gallery-1.jfif" alt="Kent" /></div>
+        <div class="gallery-slide"><img src="images/gallery-2.jfif" alt="Kent" /></div>
+        <div class="gallery-slide"><img src="images/gallery-3.jfif" alt="Kent" /></div>
+        <div class="gallery-slide"><img src="images/gallery-4.jfif" alt="Kent" /></div>
+        <div class="gallery-slide"><img src="images/gallery-5.jfif" alt="Kent" /></div>
+        <div class="gallery-slide"><img src="images/gallery-6.jfif" alt="Kent" /></div>
+        <div class="gallery-slide"><img src="images/gallery-7.jfif" alt="Kent" /></div>
+      </div>
+    </div>
+
+    <div class="gallery-nav">
+      <div class="gallery-dots" id="galleryDots"></div>
+      <div class="gallery-arrows">
+        <button class="gallery-arrow" onclick="galleryMove(-1)">‹</button>
+        <button class="gallery-arrow" onclick="galleryMove(1)">›</button>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const track = document.getElementById('galleryTrack');
+        const dotsContainer = document.getElementById('galleryDots');
+        const slides = track.querySelectorAll('.gallery-slide');
+        const total = slides.length;
+        const visible = 5;
+        const maxIndex = total - visible;
+        let current = 0;
+
+        // Build dots (one per "page")
+        const pages = Math.ceil(total / visible);
+        for (let i = 0; i < pages; i++) {
+          const dot = document.createElement('span');
+          dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+          dot.onclick = () => goTo(i * visible > maxIndex ? maxIndex : i * visible, i);
+          dotsContainer.appendChild(dot);
+        }
+
+        function updateDots(idx) {
+          const page = Math.round(idx / visible);
+          dotsContainer.querySelectorAll('.gallery-dot').forEach((d, i) => {
+            d.classList.toggle('active', i === page);
+          });
+        }
+
+        function goTo(idx) {
+          current = Math.max(0, Math.min(idx, maxIndex));
+          const slideWidth = slides[0].offsetWidth + 10;
+          track.style.transform = `translateX(-${current * slideWidth}px)`;
+          updateDots(current);
+        }
+
+        window.galleryMove = function(dir) {
+          goTo(current + dir);
+        };
+
+        window.addEventListener('resize', () => goTo(current));
+      })();
+    </script>
   </section>
 
 </div>

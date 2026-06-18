@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Kent John C. Domalaon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.2s;
+    }
+
+    .contact-card:hover {
+      border-color: var(--text);
+      transform: translateY(-2px);
+    }
+
+    .contact-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.3rem;
+      background: var(--bg2);
+    }
+
+    .contact-card-icon.facebook { background: #e7f0fd; }
+    .contact-card-icon.instagram { background: #fdeef6; }
+    .contact-card-icon.email { background: var(--bg2); }
+    .contact-card-icon.github { background: var(--bg2); }
+
+    [data-theme="dark"] .contact-card-icon.facebook { background: #1a2a3d; }
+    [data-theme="dark"] .contact-card-icon.instagram { background: #2d1a28; }
+
+    .contact-card-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-label);
+      margin-bottom: 2px;
+    }
+
+    .contact-card-value {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .contact-card-arrow {
+      margin-left: auto;
+      color: var(--text-label);
+      font-size: 1rem;
+    }
+
+    .contact-intro {
+      max-width: 560px;
+    }
+
+    @media (max-width: 600px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">KG.</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="designs.html">Designs</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <button class="theme-btn" onclick="toggleTheme()">
+    <span class="theme-icon">🌙</span>
+    <span class="theme-label">Dark</span>
+  </button>
+</nav>
+
+<div class="container">
+
+  <section class="page-hero fade-up">
+    <p class="section-label">Contact</p>
+    <h1 class="page-title">Get in touch</h1>
+    <p class="page-desc contact-intro">Open for freelance work, collaborations, and opportunities. Feel free to reach out through any of the channels below!</p>
+  </section>
+
+  <section class="fade-up" style="border-bottom: none;">
+    <div class="contact-grid">
+
+      <a href="https://www.facebook.com/" target="_blank" class="contact-card">
+        <div class="contact-card-icon facebook">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+          </svg>
+        </div>
+        <div>
+          <p class="contact-card-label">Facebook</p>
+          <p class="contact-card-value">Kent John Domalaon</p>
+        </div>
+        <span class="contact-card-arrow">›</span>
+      </a>
+
+      <a href="https://www.instagram.com/" target="_blank" class="contact-card">
+        <div class="contact-card-icon instagram">
+          <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#f09433"/>
+                <stop offset="25%" style="stop-color:#e6683c"/>
+                <stop offset="50%" style="stop-color:#dc2743"/>
+                <stop offset="75%" style="stop-color:#cc2366"/>
+                <stop offset="100%" style="stop-color:#bc1888"/>
+              </linearGradient>
+            </defs>
+            <path fill="url(#ig-grad)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </div>
+        <div>
+          <p class="contact-card-label">Instagram</p>
+          <p class="contact-card-value">@kentjohn</p>
+        </div>
+        <span class="contact-card-arrow">›</span>
+      </a>
+
+      <a href="mailto:bryllim@gmail.com" class="contact-card">
+        <div class="contact-card-icon email">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <polyline points="2,4 12,13 22,4"/>
+          </svg>
+        </div>
+        <div>
+          <p class="contact-card-label">Email</p>
+          <p class="contact-card-value">domalaonjkent031001@gmail.com</p>
+        </div>
+        <span class="contact-card-arrow">›</span>
+      </a>
+
+      <a href="https://github.com/" target="_blank" class="contact-card">
+        <div class="contact-card-icon github">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+          </svg>
+        </div>
+        <div>
+          <p class="contact-card-label">GitHub</p>
+          <p class="contact-card-value">github.com/kentjohn</p>
+        </div>
+        <span class="contact-card-arrow">›</span>
+      </a>
+
+    </div>
+  </section>
+
+</div>
+
+<footer>© 2026 Kent John C. Domalaon. All rights reserved.</footer>
+
+<script>
+  const saved = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved);
+  updateThemeBtn(saved);
+
+  function toggleTheme() {
+    const curr = document.documentElement.getAttribute('data-theme');
+    const next = curr === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateThemeBtn(next);
+  }
+
+  function updateThemeBtn(theme) {
+    document.querySelector('.theme-icon').textContent = theme === 'dark' ? '☀️' : '🌙';
+    document.querySelector('.theme-label').textContent = theme === 'dark' ? 'Light' : 'Dark';
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

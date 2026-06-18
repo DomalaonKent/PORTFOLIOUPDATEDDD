@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Kent John C. Domalaon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .about-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; padding: 48px 0; }
+
+    /* Flip Card */
+    .flip-card { width: 100%; aspect-ratio: 3 / 4; perspective: 1200px; cursor: default; }
+    .flip-card-inner {
+      position: relative; width: 100%; height: 100%;
+      transform-style: preserve-3d;
+      animation: autoFlip 6s ease-in-out infinite;
+      border-radius: 12px;
+    }
+    @keyframes autoFlip {
+      0%   { transform: rotateY(0deg); }
+      40%  { transform: rotateY(0deg); }
+      50%  { transform: rotateY(180deg); }
+      90%  { transform: rotateY(180deg); }
+      100% { transform: rotateY(360deg); }
+    }
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute; width: 100%; height: 100%;
+      backface-visibility: hidden; -webkit-backface-visibility: hidden;
+      border-radius: 12px; overflow: hidden;
+    }
+    .flip-card-front img,
+    .flip-card-back img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .flip-card-back { transform: rotateY(180deg); }
+
+    .about-content h2 { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; margin-bottom: 24px; line-height: 1.2; }
+    .about-content p { font-size: 1rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 16px; }
+    .divider { width: 40px; height: 3px; background: var(--accent); margin: 32px 0; }
+    .skills-section { margin-top: 64px; }
+    .skills-section h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 32px; }
+    .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 48px; }
+    .skill-category h4 { font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 12px; }
+    .skill-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill-tag { display: inline-block; padding: 6px 12px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 6px; font-size: 0.875rem; color: var(--text); transition: all 0.2s; }
+    .skill-tag:hover { border-color: var(--text); transform: translateY(-2px); }
+    .cta-section { margin-top: 48px; padding: 32px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .cta-btn { display: inline-block; padding: 12px 32px; background: var(--text); color: var(--bg); text-decoration: none; border-radius: 6px; font-weight: 600; transition: transform 0.2s, opacity 0.2s; }
+    .cta-btn:hover { transform: translateY(-2px); opacity: 0.9; }
+    @media (max-width: 768px) { .about-hero { grid-template-columns: 1fr; } .skills-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">KG.</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="designs.html">Designs</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="theme-btn" onclick="toggleTheme()">
+    <span class="theme-icon">🌙</span>
+    <span class="theme-label">Dark</span>
+  </button>
+</nav>
+
+<div class="container">
+
+  <div class="about-hero fade-up">
+    <div class="about-image">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/business.jfif" alt="Kent John C. Domalaon" />
+          </div>
+          <div class="flip-card-back">
+            <img src="images/gallery-6.jfif" alt="Kent John C. Domalaon" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-content">
+      <h2>Designer & Developer Crafting Digital Experiences</h2>
+      <p>I'm Kent, a UI/UX Designer and Frontend Developer based in Prieto Diaz, Sorsogon PH. With a degree in Information Technology, I specialize in creating intuitive, visually refined interfaces that bridge design and development seamlessly.</p>
+      <div class="divider"></div>
+      <p>My work spans enterprise systems, mobile applications, and design systems. I'm passionate about minimalist design philosophy—believing that elegance comes from clarity, and that every pixel serves a purpose.</p>
+      <p>When I'm not designing or coding, I'm exploring design trends, experimenting with new technologies, and continuously refining my craft.</p>
+    </div>
+  </div>
+
+  <div class="skills-section fade-up">
+    <h3>Skills & Expertise</h3>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h4>Design</h4>
+        <div class="skill-list">
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">UI/UX Design</span>
+          <span class="skill-tag">Design Systems</span>
+          <span class="skill-tag">Wireframing</span>
+          <span class="skill-tag">Prototyping</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h4>Frontend Development</h4>
+        <div class="skill-list">
+          <span class="skill-tag">HTML/CSS</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Angular</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">Tailwind CSS</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h4>Backend & Tools</h4>
+        <div class="skill-list">
+          <span class="skill-tag">PHP</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">Git</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h4>Other Skills</h4>
+        <div class="skill-list">
+          <span class="skill-tag">Responsive Design</span>
+          <span class="skill-tag">Web Performance</span>
+          <span class="skill-tag">Version Control</span>
+          <span class="skill-tag">Team Collaboration</span>
+          <span class="skill-tag">Problem Solving</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-section fade-up">
+    <p style="font-size: 1.125rem; font-weight: 500; margin-bottom: 8px;">Let's work together</p>
+    <p>Interested in collaborating on your next project? Get in touch—I'd love to hear from you.</p>
+    <a href="contact.html" class="cta-btn">Start a Conversation</a>
+  </div>
+
+</div>
+
+<footer>© 2026 Kent John C. Domalaon. All rights reserved.</footer>
+
+<script>
+  const saved = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved);
+  updateThemeBtn(saved);
+  function toggleTheme() {
+    const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateThemeBtn(next);
+  }
+  function updateThemeBtn(theme) {
+    document.querySelector('.theme-icon').textContent = theme === 'dark' ? '☀️' : '🌙';
+    document.querySelector('.theme-label').textContent = theme === 'dark' ? 'Light' : 'Dark';
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
