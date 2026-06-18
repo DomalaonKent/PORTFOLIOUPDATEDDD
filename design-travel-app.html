@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel App — Designs — Kent John C. Domalaon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">KG.</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="designs.html" class="active">Designs</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <button class="theme-btn" onclick="toggleTheme()">
+    <span class="theme-icon">🌙</span>
+    <span class="theme-label">Dark</span>
+  </button>
+</nav>
+<div class="container">
+
+  <div class="detail-hero fade-up">
+    <a href="designs.html" class="back-link">← Back to Designs</a>
+    <h1 class="detail-title">Travel App</h1>
+    <div class="detail-meta">
+      <span class="tag">Figma</span><span class="tag">Mobile App</span><span class="tag">UI/UX</span><span class="tag">Travel</span>
+    </div>
+    <p class="detail-desc">A mobile travel companion app UI designed to help users discover destinations, plan itineraries, and book experiences — all in one place. Vibrant, image-forward design that inspires wanderlust while keeping trip planning simple.</p>
+  </div>
+
+  <div class="gallery fade-up">
+    <p class="section-label" style="margin-bottom:16px">Gallery</p>
+    <div class="gallery-main"><img id="main-img" src="images/preview (23).webp" alt="Travel App" /></div>
+    <div class="gallery-thumbs">
+      <div class="gallery-thumb active" onclick="setImg('images/preview (23).webp',this)"><img src="images/preview (23).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (24).webp',this)"><img src="images/preview (24).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (25).webp',this)"><img src="images/preview (25).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (26).webp',this)"><img src="images/preview (26).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (27).webp',this)"><img src="images/preview (27).webp" /></div>
+    </div>
+  </div>
+
+  <div class="detail-sections fade-up">
+    <div class="detail-main">
+      <div class="detail-block">
+        <p class="detail-block-title">Problem</p>
+        <p>Travel planning is fragmented across multiple apps — one for flights, another for hotels, another for activities. Users waste time switching between platforms and lose context about their full trip plan.</p>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Solution</p>
+        <p>Designed an all-in-one travel app that consolidates destination discovery, itinerary building, and booking into a single, visually engaging mobile experience. The app uses rich photography and map integration to keep users inspired and organized.</p>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Key Features</p>
+        <ul class="feature-list">
+          <li>Destination discovery feed with curated recommendations</li>
+          <li>Interactive itinerary builder with drag-and-drop day planning</li>
+          <li>Integrated map view for nearby attractions</li>
+          <li>Saved trips and wishlist for future travel</li>
+          <li>Activity and experience booking cards</li>
+        </ul>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Design Process</p>
+        <div class="process-steps">
+          <div class="process-step"><span class="step-num">01</span><div class="step-body"><p class="step-title">Mood & Style</p><p class="step-desc">Set a vibrant, aspirational visual direction — full-bleed destination photos, warm colors, and clean sans-serif typography to evoke excitement.</p></div></div>
+          <div class="process-step"><span class="step-num">02</span><div class="step-body"><p class="step-title">User Flow</p><p class="step-desc">Mapped the core flows: explore destinations → save to trip → build itinerary → book. Kept navigation minimal with a bottom tab bar.</p></div></div>
+          <div class="process-step"><span class="step-num">03</span><div class="step-body"><p class="step-title">UI Design & Prototype</p><p class="step-desc">Designed all screens in Figma and connected them into an interactive prototype showcasing the full explore-to-book journey.</p></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="detail-sidebar">
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Project Info</p>
+        <div class="sidebar-item"><span class="sidebar-item-label">Type</span><span class="sidebar-item-value">Mobile App</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Role</span><span class="sidebar-item-value">UI/UX Designer</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Tool</span><span class="sidebar-item-value">Figma</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Year</span><span class="sidebar-item-value">2024</span></div>
+      </div>
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Design Tags</p>
+        <div class="tags" style="gap:6px"><span class="tag">Travel</span><span class="tag">Mobile</span><span class="tag">App Design</span><span class="tag">Figma</span></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<footer>© 2026 Kent John C. Domalaon. All rights reserved.</footer>
+<script>
+  const saved = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved); updateThemeBtn(saved);
+  function toggleTheme() {
+    const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next); localStorage.setItem('theme', next); updateThemeBtn(next);
+  }
+  function updateThemeBtn(theme) {
+    document.querySelector('.theme-icon').textContent = theme === 'dark' ? '☀️' : '🌙';
+    document.querySelector('.theme-label').textContent = theme === 'dark' ? 'Light' : 'Dark';
+  }
+  function setImg(src, thumb) {
+    document.getElementById('main-img').src = src;
+    document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

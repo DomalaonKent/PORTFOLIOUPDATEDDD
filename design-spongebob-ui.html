@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpongeBob UI Concept — Designs — Kent John C. Domalaon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">KG.</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="designs.html" class="active">Designs</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <button class="theme-btn" onclick="toggleTheme()">
+    <span class="theme-icon">🌙</span>
+    <span class="theme-label">Dark</span>
+  </button>
+</nav>
+<div class="container">
+
+  <div class="detail-hero fade-up">
+    <a href="designs.html" class="back-link">← Back to Designs</a>
+    <h1 class="detail-title">SpongeBob UI Concept</h1>
+    <div class="detail-meta">
+      <span class="tag">Figma</span><span class="tag">Conceptual</span><span class="tag">UI/UX</span><span class="tag">Fun</span>
+    </div>
+    <p class="detail-desc">A fun, conceptual UI redesign inspired by SpongeBob SquarePants — exploring how a beloved IP could translate into a modern digital interface. A creative exercise in themed design systems, playful color use, and maintaining usability within an expressive visual language.</p>
+  </div>
+
+  <div class="gallery fade-up">
+    <p class="section-label" style="margin-bottom:16px">Gallery</p>
+    <div class="gallery-main"><img id="main-img" src="images/preview (33).webp" alt="SpongeBob UI" /></div>
+    <div class="gallery-thumbs">
+      <div class="gallery-thumb active" onclick="setImg('images/preview (33).webp',this)"><img src="images/preview (33).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (34).webp',this)"><img src="images/preview (34).webp" /></div>
+    </div>
+  </div>
+
+  <div class="detail-sections fade-up">
+    <div class="detail-main">
+      <div class="detail-block">
+        <p class="detail-block-title">Overview</p>
+        <p>This is a personal conceptual project exploring themed UI design. The challenge: take a beloved cartoon universe and translate it into a real, functional-feeling app interface — without losing usability in favor of style.</p>
+        <p>The result demonstrates how expressive design systems can still maintain clarity, hierarchy, and UX principles when executed thoughtfully.</p>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Design Approach</p>
+        <ul class="feature-list">
+          <li>Color palette derived from SpongeBob's world — yellow, teal, coral, and sand</li>
+          <li>Rounded, bubbly UI elements to match the playful aesthetic</li>
+          <li>Maintained standard UX patterns (nav, cards, CTAs) for usability</li>
+          <li>Illustrated icons and textures as visual accents</li>
+          <li>Tested readability and contrast across all themed screens</li>
+        </ul>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Design Process</p>
+        <div class="process-steps">
+          <div class="process-step"><span class="step-num">01</span><div class="step-body"><p class="step-title">Visual Reference Collection</p><p class="step-desc">Gathered colors, textures, and visual motifs from the SpongeBob universe to build a moodboard and extract a design palette.</p></div></div>
+          <div class="process-step"><span class="step-num">02</span><div class="step-body"><p class="step-title">Design System</p><p class="step-desc">Built a themed component set — buttons, cards, nav bars, inputs — using the IP-derived color and shape system.</p></div></div>
+          <div class="process-step"><span class="step-num">03</span><div class="step-body"><p class="step-title">Screen Design</p><p class="step-desc">Applied the system to multiple screen layouts, balancing fun aesthetics with clear, scannable information architecture.</p></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="detail-sidebar">
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Project Info</p>
+        <div class="sidebar-item"><span class="sidebar-item-label">Type</span><span class="sidebar-item-value">Conceptual / Personal</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Role</span><span class="sidebar-item-value">UI/UX Designer</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Tool</span><span class="sidebar-item-value">Figma</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Year</span><span class="sidebar-item-value">2024</span></div>
+      </div>
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Design Tags</p>
+        <div class="tags" style="gap:6px"><span class="tag">Conceptual</span><span class="tag">Themed UI</span><span class="tag">Fun</span><span class="tag">Figma</span></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<footer>© 2026 Kent John C. Domalaon. All rights reserved.</footer>
+<script>
+  const saved = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved); updateThemeBtn(saved);
+  function toggleTheme() {
+    const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next); localStorage.setItem('theme', next); updateThemeBtn(next);
+  }
+  function updateThemeBtn(theme) {
+    document.querySelector('.theme-icon').textContent = theme === 'dark' ? '☀️' : '🌙';
+    document.querySelector('.theme-label').textContent = theme === 'dark' ? 'Light' : 'Dark';
+  }
+  function setImg(src, thumb) {
+    document.getElementById('main-img').src = src;
+    document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

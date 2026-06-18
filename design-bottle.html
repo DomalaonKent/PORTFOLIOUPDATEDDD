@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bottle — Designs — Kent John C. Domalaon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">KG.</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="designs.html" class="active">Designs</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <button class="theme-btn" onclick="toggleTheme()">
+    <span class="theme-icon">🌙</span>
+    <span class="theme-label">Dark</span>
+  </button>
+</nav>
+<div class="container">
+
+  <div class="detail-hero fade-up">
+    <a href="designs.html" class="back-link">← Back to Designs</a>
+    <h1 class="detail-title">Bottle</h1>
+    <div class="detail-meta">
+      <span class="tag">Figma</span><span class="tag">E-commerce</span><span class="tag">UI/UX</span><span class="tag">Product Design</span>
+    </div>
+    <p class="detail-desc">A minimal e-commerce UI concept for a premium water bottle brand. Focused on clean product presentation, strong visual hierarchy, and a frictionless purchase flow — designed to convert browsers into buyers through elegant simplicity.</p>
+  </div>
+
+  <div class="gallery fade-up">
+    <p class="section-label" style="margin-bottom:16px">Gallery</p>
+    <div class="gallery-main"><img id="main-img" src="images/preview (35).webp" alt="Bottle" /></div>
+    <div class="gallery-thumbs">
+      <div class="gallery-thumb active" onclick="setImg('images/preview (35).webp',this)"><img src="images/preview (35).webp" /></div>
+      <div class="gallery-thumb" onclick="setImg('images/preview (36).webp',this)"><img src="images/preview (36).webp" /></div>
+    </div>
+  </div>
+
+  <div class="detail-sections fade-up">
+    <div class="detail-main">
+      <div class="detail-block">
+        <p class="detail-block-title">Problem</p>
+        <p>Premium product brands often struggle to translate their physical quality into digital experiences. Generic e-commerce templates don't communicate brand value, leading to low perceived quality and poor conversion rates — especially for design-conscious buyers.</p>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Solution</p>
+        <p>Designed a minimal, editorial-style e-commerce interface that lets the product speak for itself. Large product photography, generous whitespace, and a focused color palette create a premium feel that matches the physical product's quality positioning.</p>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Key Features</p>
+        <ul class="feature-list">
+          <li>Full-screen hero product photography with color switcher</li>
+          <li>Minimal product detail page with feature highlights</li>
+          <li>Clean add-to-cart flow with size and variant selection</li>
+          <li>Editorial "About" section with brand story</li>
+          <li>Streamlined checkout page design</li>
+        </ul>
+      </div>
+      <div class="detail-block">
+        <p class="detail-block-title">Design Process</p>
+        <div class="process-steps">
+          <div class="process-step"><span class="step-num">01</span><div class="step-body"><p class="step-title">Brand Direction</p><p class="step-desc">Established a premium minimal aesthetic — white space, muted earth tones, and clean sans-serif typography to signal quality without excess.</p></div></div>
+          <div class="process-step"><span class="step-num">02</span><div class="step-body"><p class="step-title">Conversion-Focused Layout</p><p class="step-desc">Structured the product page around the buyer's decision journey: see the product → understand the value → add to cart — with zero distractions.</p></div></div>
+          <div class="process-step"><span class="step-num">03</span><div class="step-body"><p class="step-title">High-Fidelity Screens</p><p class="step-desc">Designed complete screens in Figma including hover states, variant selection, and the full checkout flow.</p></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="detail-sidebar">
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Project Info</p>
+        <div class="sidebar-item"><span class="sidebar-item-label">Type</span><span class="sidebar-item-value">E-commerce</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Role</span><span class="sidebar-item-value">UI/UX Designer</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Tool</span><span class="sidebar-item-value">Figma</span></div>
+        <div class="sidebar-item"><span class="sidebar-item-label">Year</span><span class="sidebar-item-value">2024</span></div>
+      </div>
+      <div class="sidebar-block">
+        <p class="sidebar-block-title">Design Tags</p>
+        <div class="tags" style="gap:6px"><span class="tag">E-commerce</span><span class="tag">Minimal</span><span class="tag">Product</span><span class="tag">Figma</span></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<footer>© 2026 Kent John C. Domalaon. All rights reserved.</footer>
+<script>
+  const saved = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved); updateThemeBtn(saved);
+  function toggleTheme() {
+    const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next); localStorage.setItem('theme', next); updateThemeBtn(next);
+  }
+  function updateThemeBtn(theme) {
+    document.querySelector('.theme-icon').textContent = theme === 'dark' ? '☀️' : '🌙';
+    document.querySelector('.theme-label').textContent = theme === 'dark' ? 'Light' : 'Dark';
+  }
+  function setImg(src, thumb) {
+    document.getElementById('main-img').src = src;
+    document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
