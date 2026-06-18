@@ -34,15 +34,31 @@
     <p class="detail-desc">Damayan is a community mutual aid app concept designed to connect Filipinos in times of need. The platform enables neighbors to request and offer help — whether financial, physical, or emotional — building resilience in local communities through technology.</p>
   </div>
 
-  <div class="gallery fade-up">
+    <div class="gallery fade-up">
     <p class="section-label" style="margin-bottom:16px">Gallery</p>
-    <div class="gallery-main"><img id="main-img" src="images/preview (28).webp" alt="Damayan" /></div>
-    <div class="gallery-thumbs">
-      <div class="gallery-thumb active" onclick="setImg('images/preview (28).webp',this)"><img src="images/preview (28).webp" /></div>
-      <div class="gallery-thumb" onclick="setImg('images/preview (29).webp',this)"><img src="images/preview (29).webp" /></div>
-      <div class="gallery-thumb" onclick="setImg('images/preview (30).webp',this)"><img src="images/preview (30).webp" /></div>
-      <div class="gallery-thumb" onclick="setImg('images/preview (31).webp',this)"><img src="images/preview (31).webp" /></div>
-      <div class="gallery-thumb" onclick="setImg('images/preview (32).webp',this)"><img src="images/preview (32).webp" /></div>
+    
+    <div class="mockup-container phone-mockup">
+      <div class="phone-shell">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <img id="main-img" src="images/preview (28).webp" alt="Design preview" class="mockup-img" />
+        </div>
+        <div class="phone-home-btn"></div>
+      </div>
+    </div>
+    <div class="slide-controls">
+      <button class="slide-btn" onclick="prevSlide()">&#8592;</button>
+      <div class="slide-dots"><span class="slide-dot active" onclick="goSlide(0)"></span><span class="slide-dot" onclick="goSlide(1)"></span><span class="slide-dot" onclick="goSlide(2)"></span></div>
+      <button class="slide-btn" onclick="nextSlide()">&#8594;</button>
+    </div>
+  </div>
+        <div class="phone-home-btn"></div>
+      </div>
+    </div>
+    <div class="slide-controls">
+      <button class="slide-btn" onclick="prevSlide()">&#8592;</button>
+      <div class="slide-dots"><span class="slide-dot active" onclick="goSlide(0)"></span><span class="slide-dot" onclick="goSlide(1)"></span><span class="slide-dot" onclick="goSlide(2)"></span><span class="slide-dot" onclick="goSlide(3)"></span><span class="slide-dot" onclick="goSlide(4)"></span></div>
+      <button class="slide-btn" onclick="nextSlide()">&#8594;</button>
     </div>
   </div>
 
@@ -113,5 +129,60 @@
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 </script>
+
+<style>
+/* ===== MOCKUP FRAMES ===== */
+.mockup-container { display:flex; justify-content:center; margin: 24px 0 16px; }
+
+/* Laptop mockup */
+.laptop-shell { display:inline-block; background:#1a1a1a; border-radius:14px 14px 0 0; padding:10px 10px 0; box-shadow:0 20px 60px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.1); max-width:700px; width:100%; }
+.laptop-screen { background:#111; border-radius:6px 6px 0 0; overflow:hidden; }
+.laptop-bar { background:#2a2a2a; display:flex; align-items:center; gap:6px; padding:7px 10px; }
+.laptop-dot { width:10px; height:10px; border-radius:50%; display:inline-block; }
+.laptop-dot:nth-child(1){background:#ff5f57;} .laptop-dot:nth-child(2){background:#febc2e;} .laptop-dot:nth-child(3){background:#28c840;}
+.laptop-urlbar { flex:1; height:18px; background:#3a3a3a; border-radius:4px; margin-left:6px; }
+.laptop-base { background:#2a2a2a; height:18px; border-radius:0 0 6px 6px; display:flex; justify-content:center; }
+.laptop-notch-base { width:80px; height:10px; background:#1a1a1a; border-radius:0 0 6px 6px; }
+.laptop-shell .mockup-img { width:100%; max-height:460px; object-fit:contain; object-position:top center; display:block; background:#111; transition:opacity 0.4s; }
+
+/* Phone mockup */
+.phone-shell { background:#1a1a1a; border-radius:40px; padding:14px; box-shadow:0 20px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1); width:260px; }
+.phone-notch { width:64px; height:22px; background:#000; border-radius:0 0 14px 14px; margin:0 auto 8px; }
+.phone-screen { background:#000; border-radius:22px; overflow:hidden; }
+.phone-home-btn { width:44px; height:5px; background:#333; border-radius:3px; margin:10px auto 0; }
+.phone-shell .mockup-img { width:100%; max-height:500px; object-fit:contain; object-position:top center; display:block; background:#000; transition:opacity 0.4s; }
+
+/* Poster (no frame) */
+.poster-mockup { border-radius:12px; overflow:hidden; max-width:600px; width:100%; box-shadow:0 16px 48px rgba(0,0,0,0.2); }
+.poster-img { width:100%; max-height:600px; object-fit:contain; display:block; border-radius:12px; transition:opacity 0.4s; }
+
+/* Slider controls */
+.slide-controls { display:flex; align-items:center; justify-content:center; gap:12px; margin-top:16px; }
+.slide-btn { background:var(--card-bg); border:1px solid var(--border); color:var(--text); width:34px; height:34px; border-radius:50%; cursor:pointer; font-size:14px; display:flex; align-items:center; justify-content:center; transition:background 0.2s; }
+.slide-btn:hover { background:var(--border); }
+.slide-dots { display:flex; gap:8px; }
+.slide-dot { width:8px; height:8px; border-radius:50%; background:var(--border); cursor:pointer; transition:background 0.2s, transform 0.2s; }
+.slide-dot.active { background:var(--text); transform:scale(1.3); }
+.mockup-img.fading { opacity:0; }
+</style>
+<script>
+const _slides = ["images/preview (28).webp","images/preview (29).webp","images/preview (30).webp"];
+let _cur = 0, _timer = null;
+function _updateSlide() {
+  const img = document.getElementById('main-img');
+  img.classList.add('fading');
+  setTimeout(() => {
+    img.src = _slides[_cur];
+    img.classList.remove('fading');
+  }, 350);
+  document.querySelectorAll('.slide-dot').forEach((d,i) => d.classList.toggle('active', i===_cur));
+}
+function nextSlide() { _cur = (_cur+1)%_slides.length; _updateSlide(); resetTimer(); }
+function prevSlide() { _cur = (_cur-1+_slides.length)%_slides.length; _updateSlide(); resetTimer(); }
+function goSlide(i) { _cur=i; _updateSlide(); resetTimer(); }
+function resetTimer() { clearInterval(_timer); _timer = setInterval(nextSlide, 3500); }
+resetTimer();
+</script>
+
 </body>
 </html>
