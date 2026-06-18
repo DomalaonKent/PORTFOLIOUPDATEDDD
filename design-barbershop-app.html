@@ -52,15 +52,6 @@
       <button class="slide-btn" onclick="nextSlide()">&#8594;</button>
     </div>
   </div>
-        <div class="phone-home-btn"></div>
-      </div>
-    </div>
-    <div class="slide-controls">
-      <button class="slide-btn" onclick="prevSlide()">&#8592;</button>
-      <div class="slide-dots"><span class="slide-dot active" onclick="goSlide(0)"></span><span class="slide-dot" onclick="goSlide(1)"></span><span class="slide-dot" onclick="goSlide(2)"></span><span class="slide-dot" onclick="goSlide(3)"></span><span class="slide-dot" onclick="goSlide(4)"></span></div>
-      <button class="slide-btn" onclick="nextSlide()">&#8594;</button>
-    </div>
-  </div>
 
   <div class="detail-sections fade-up">
     <div class="detail-main">
@@ -145,14 +136,14 @@
 .laptop-urlbar { flex:1; height:18px; background:#3a3a3a; border-radius:4px; margin-left:6px; }
 .laptop-base { background:#2a2a2a; height:18px; border-radius:0 0 6px 6px; display:flex; justify-content:center; }
 .laptop-notch-base { width:80px; height:10px; background:#1a1a1a; border-radius:0 0 6px 6px; }
-.laptop-shell .mockup-img { width:100%; max-height:460px; object-fit:contain; object-position:top center; display:block; background:#111; transition:opacity 0.4s; }
+.laptop-shell .mockup-img { width:100%; max-height:460px; object-fit:cover; object-position:top center; display:block; background:#111; transition:opacity 0.4s; }
 
 /* Phone mockup */
 .phone-shell { background:#1a1a1a; border-radius:40px; padding:14px; box-shadow:0 20px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1); width:260px; }
 .phone-notch { width:64px; height:22px; background:#000; border-radius:0 0 14px 14px; margin:0 auto 8px; }
 .phone-screen { background:#000; border-radius:22px; overflow:hidden; }
 .phone-home-btn { width:44px; height:5px; background:#333; border-radius:3px; margin:10px auto 0; }
-.phone-shell .mockup-img { width:100%; max-height:500px; object-fit:contain; object-position:top center; display:block; background:#000; transition:opacity 0.4s; }
+.phone-shell .mockup-img { width:100%; max-height:500px; object-fit:cover; object-position:top center; display:block; background:#000; transition:opacity 0.4s; }
 
 /* Poster (no frame) */
 .poster-mockup { border-radius:12px; overflow:hidden; max-width:600px; width:100%; box-shadow:0 16px 48px rgba(0,0,0,0.2); }
